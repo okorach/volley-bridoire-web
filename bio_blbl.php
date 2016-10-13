@@ -39,15 +39,14 @@
         <div class="row">
             <div class="mbr-table-md-up">
               <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-6">
-                  <div class="mbr-figure" ><img src="photos/joueurs/olivier.jpg"></div>
+                  <div class="mbr-figure" ><img src="photos/joueurs/no_photo.jpg"></div>
               </div>
               <div class="mbr-table-cell oko-player col-md-6 text-xs-center text-md-left">
-                  <h3 class="mbr-section-title display-2">Olivier</h3>
+                  <h3 class="mbr-section-title display-2">Laurent #2</h3>
                   <div class="lead">
-                    <p>Surnom: Le Président Tout Puissant<br>
-					Poste préféré: Réceptionneur Attaquant<br>
-					Autres postes: Passeur, Relanceur<br>
-					Quoi d'autre: Se transforme en une bête parfois pénible sur le terrain</p>
+                    <p>Surnom: Blbl<br>
+					Poste préféré: Attaquant<br>
+					Quoi d'autre: N&eacute;o Papa, Si t'as besoin de faire construire une baraque, appelle-le !</p>
 
 					<?php include 'joueurs_liste.html';?>
 
@@ -65,6 +64,7 @@
         <p class="text-xs-center"><a href="index.html">Home</a> |
 
 		<?php include 'joueurs_liste.html';?>	
+	
 	
 		<br>Copyright (c) 2016 Volley La Bridoire.</p>
     </div>

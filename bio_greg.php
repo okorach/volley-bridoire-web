@@ -31,7 +31,7 @@
 
 <?php include 'menubar.html';?>
 
-<section class="mbr-section mbr-parallax-background" id="page4-msg-box7-0" style="background-image: url(photos/backgrounds/bg_joueurs.jpg); padding-top: 240px; padding-bottom: 240px;">
+<section class="mbr-section mbr-parallax-background" id="page4-msg-box7-0" style="background-image: url(photos/backgrounds/bg_joueur_attack.jpg); padding-top: 240px; padding-bottom: 240px;">
 
     <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);">
     </div>
@@ -39,15 +39,15 @@
         <div class="row">
             <div class="mbr-table-md-up">
               <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-6">
-                  <div class="mbr-figure" ><img src="photos/joueurs/olivier.jpg"></div>
+                  <div class="mbr-figure" ><img src="photos/joueurs/greg.jpg"></div>
               </div>
               <div class="mbr-table-cell oko-player col-md-6 text-xs-center text-md-left">
-                  <h3 class="mbr-section-title display-2">Olivier</h3>
+                  <h3 class="mbr-section-title display-2">Grégory</h3>
                   <div class="lead">
-                    <p>Surnom: Le Président Tout Puissant<br>
-					Poste préféré: Réceptionneur Attaquant<br>
-					Autres postes: Passeur, Relanceur<br>
-					Quoi d'autre: Se transforme en une bête parfois pénible sur le terrain</p>
+                    <p>Surnom: Greg le chevelu<br>
+					Poste préféré: Attaquant<br>
+					Activité préférée: La pêche, la protection des batraciens, ... ouais ouais je bosse à EDF<br>
+					</p>
 
 					<?php include 'joueurs_liste.html';?>
 
@@ -65,6 +65,7 @@
         <p class="text-xs-center"><a href="index.html">Home</a> |
 
 		<?php include 'joueurs_liste.html';?>	
+	
 	
 		<br>Copyright (c) 2016 Volley La Bridoire.</p>
     </div>

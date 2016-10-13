@@ -6,50 +6,25 @@
 
 <?php include 'menubar.html';?>
 
-<section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-0" style="background-image: url(assets/images/desert.jpg); padding-top: 160px; padding-bottom: 120px;">
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-after-navbar" id="header1-0" style="background-image: url(assets/images/jumbotron.jpg);">
 
-    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-xs-center">
-                <h3 class="mbr-section-title display-2">News</h3>
-                <div class="lead">Quoi de neuf au club ?</div>
-                
+    
+
+    <div class="mbr-table-cell">
+
+        <div class="container">
+            <div class="row">
+                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+
+                    <h1 class="mbr-section-title display-1">Liens</h1>
+                    <p class="mbr-section-lead lead">Vous pouvez nous contacter:<br>Par email: <strong>volley.bridoire@free.fr</strong><br>Par téléphone: <strong>06 89 55 50 91</strong><br><strong><br></strong><br>Nous rencontrer: Quand nous n'avons de match a l'exterieur nous nous entrainons le <strong>mardi soir a 20h30</strong> au <a href="gymnase.php"><strong>Gymnase de Rochassieux a La Bridoire</strong></a>.<br><br></p>
+                    
+                </div>
             </div>
         </div>
     </div>
 
-</section>
-
-<section class="mbr-section mbr-section__container" id="header3-0" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h3 class="mbr-section-title display-2">News Saison 2015/2016</h3>
-                <small class="mbr-section-subtitle"></small>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 lead"><p><span style="font-size: 1.07rem; line-height: 1.5;">Blah blah blah.</span><br></p></div>
-        </div>
-    </div>
-
-</section>
-
-<section class="mbr-section article mbr-section__container" id="content1-1" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 lead"><p>Saison 2015/2016 | Saison 2014/2015 | Saison 2013/2014 | Saison 2012/2013</p></div>
-        </div>
-    </div>
+    
 
 </section>
 
@@ -79,8 +54,6 @@ Tel: <a href="tel:+33689555081" target="_blank">06 89 55 50 81</a><br></p>
     </div>
 </section>
 
-<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-0" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
 	<?php include 'footer.html';?>
 
 	<?php include 'jsscripts.html';?>

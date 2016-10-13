@@ -22,22 +22,22 @@
 
 </section>
 
-<section class="mbr-section mbr-section__container" id="header3-0" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
+<section class="mbr-section mbr-section__container" id="header3-0" style="background-color: rgb(239, 239, 239); padding-top: 20px; padding-bottom: 20px;">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h3 class="mbr-section-title display-2">News Saison 2015/2016</h3>
-                <small class="mbr-section-subtitle"></small>
+                <h3 class="mbr-section-title display-2">Saison 2016/2017</h3>
+                
             </div>
         </div>
     </div>
 </section>
 
-<section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
+<section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(204, 204, 204); padding-top: 20px; padding-bottom: 20px;">
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><p><span style="font-size: 1.07rem; line-height: 1.5;">Blah blah blah.</span><br></p></div>
+            <div class="col-xs-12 lead"><p><strong>Par Olivier, le 20/09/2016</strong></p><p>Ca y est, le coup d'envoi de la saison 2016/2017 est donne.</p><p>A cette occasion, un grand raffraichissement de notre site web. Puree, ca fait pro !</p><p>Cela n'empeche pas un grand merci a Bubu qui a maintenu l'ancien site a flot pendant plusieurs annees, avec des nouvelles regulieres. On va tacher de faire toujours aussi bien (qui a dit mieux ?) avec une presentation plus sympa.</p><p>L'assemblee generale de la <a href="http://www.fsgt73.fr"><strong>FSGT Savoie</strong></a>&nbsp;Volley aura lieu le 22/09 a Chambery. Merci a <strong>Taz</strong> et <strong>Kad</strong> de nous representer.</p></div>
         </div>
     </div>
 
@@ -79,8 +79,6 @@ Tel: <a href="tel:+33689555081" target="_blank">06 89 55 50 81</a><br></p>
     </div>
 </section>
 
-<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-0" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
 	<?php include 'footer.html';?>
 
 	<?php include 'jsscripts.html';?>

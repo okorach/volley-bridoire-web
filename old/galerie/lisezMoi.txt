@@ -1,0 +1,23 @@
+Documentation : « chrisGalerie»
+
+Version : 1.0 (23/09/2008)
+Créateur : Christophe Hounau mailto :c.hounau@webcrea.fr
+chrisGalerie est un freeware que vous pouvez utiliser et diffuser autant que vous le souhaitez.
+chrisGalerie vous permet de diffuser sur le net vos images le plus simplement possible. Il nécessite d’être installé sur un serveur disposant de PHP4. Si vous êtes en local, vous devez disposer de PHP.
+
+Installation :
+
+Copier le contenu du dossier chrisGalerie sur votre serveur et copier vos photos dans le répertoire « photos ». chrisGalerie est prêt à fonctionner. 
+Taper l’url http://votredomaine/chrisGalerie/index.php dans un navigateur pour consulter votre galerie de photos
+
+Complément d’information :
+
+chrisGalerie est fait pour accepter tous types d’images supportés par flash. La taille et le poids n’ont aucune importance (si ce n’est dans le délai de téléchargement).  
+Vous pouvez restreindre les formats en modifiant la variable « formats » dans params.php 
+La hauteur et la largeur de diffusion dans la galerie se règlent en modifiant la taille du clip « fond » pour l’image et photo pour la vignette.
+Les noms de fichier supportent les caractères étendus à l’exception du point qui indique le début du format du fichier (jpg, png…)
+Pour changer le répertoire des photos, ouvrez le fichier params.php et modifier la variable « cheminPhotos ». 
+
+A savoir :
+
+L’idée de chrisGalerie est davantage de fournir aux développeurs ou aux infographistes une base de travail pour répondre à votre besoin plus spécifique. chrisGalerie est complètement personnalisable. chrisGalerie est plus proche du tutoriel que d’un composant abouti où le paramétrage se ferait via des écrans de configuration. Je vous invite à ouvrir le flash afin d’y modifier les tailles des clips « image » et « fond » ou déplacer le clip « deroulant » (et son masque), ajouter des roll-over sur les boutons ou une boucle de téléchargement pour les vignettes. chrisGalerie télécharge l’intégralité des images dans le déroulant. Ce qui signifie que quand vous cliquez sur une vignette, l’image est chargée à partir de votre cache et non du serveur. Plus de fluidité mais aussi plus de place en mémoire. Donc, si ça plante, c’est probablement qu’il n’y a plus de mémoire disponible sur votre ordinateur pour charger l’intégralité de la galerie de photos.

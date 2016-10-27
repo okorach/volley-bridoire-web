@@ -1,10 +1,10 @@
-<?php include 'header.html';?>
+<?php include 'inc/header.html';?>
 
 <body>
 
-<?php include 'analytics.html';?>
+<?php include 'inc/analytics.html';?>
 
-<?php include 'menubar.html';?>
+<?php include 'inc/menubar.html';?>
 
 <section class="mbr-slider mbr-section mbr-section__container carousel slide mbr-section-nopadding mbr-after-navbar" data-ride="carousel" data-keyboard="false" data-wrap="true" data-pause="false" data-interval="5000" id="page1-slider3-0">
     <div>
@@ -107,9 +107,9 @@
 </section>
 
 
-	<?php include 'footer.html';?>
+	<?php include 'inc/footer.html';?>
 
-	<?php include 'jsscripts.html';?>
+	<?php include 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

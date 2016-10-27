@@ -1,10 +1,19 @@
-<?php include 'header.html';?>
+<?php include 'inc/header.html';?>
 
 <body>
 
-<?php include 'analytics.html';?>
+<?php include 'inc/analytics.html';?>
 
-<?php include 'menubar.html';?>
+<?php include 'inc/menubar.html';?>
+
+<?php
+if (isset($_GET['saison'])) {
+   $saison = $_GET['saison'];
+} else {
+   $saison = 2016;
+}
+$nextyear = $saison+1;
+?>
 
 <section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-0" style="background-image: url(assets/images/desert.jpg); padding-top: 160px; padding-bottom: 120px;">
 
@@ -26,7 +35,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h3 class="mbr-section-title display-2">Saison 2016/2017</h3>
+<?php
+	echo "<h3 class=\"mbr-section-title display-2\">Saison $saison/$nextyear</h3>";
+?>
                 
             </div>
         </div>
@@ -35,11 +46,28 @@
 
 <section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(204, 204, 204); padding-top: 20px; padding-bottom: 20px;">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 lead"><p><strong>Par Olivier, le 20/09/2016</strong></p><p>Ca y est, le coup d'envoi de la saison 2016/2017 est donne.</p><p>A cette occasion, un grand raffraichissement de notre site web. Puree, ca fait pro !</p><p>Cela n'empeche pas un grand merci a Bubu qui a maintenu l'ancien site a flot pendant plusieurs annees, avec des nouvelles regulieres. On va tacher de faire toujours aussi bien (qui a dit mieux ?) avec une presentation plus sympa.</p><p>L'assemblee generale de la <a href="http://www.fsgt73.fr"><strong>FSGT Savoie</strong></a>&nbsp;Volley aura lieu le 22/09 a Chambery. Merci a <strong>Taz</strong> et <strong>Kad</strong> de nous representer.</p></div>
-        </div>
-    </div>
+<?php
+
+$dh  = opendir('news');
+while (false !== ($filename = readdir($dh))) {
+    $files[] = $filename;
+}
+closedir($dh);
+rsort($files);
+
+foreach ($files as $file)
+{
+	if (preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) )
+	{
+		if (($matches[1] == $saison && $matches[2] >= 8) || ($matches[1] == ($saison+1) && $matches[2] <= 7))
+		{
+			echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
+			include($file);
+			echo "</div> </div> </div> <p></p>\n";
+		}
+	}
+}
+?>
 
 </section>
 
@@ -71,7 +99,7 @@ Tel: <a href="tel:+33689555081" target="_blank">06 89 55 50 81</a><br></p>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p>Contacts</p><p><br>
 <a href="http://www.fsgt73.fr" target="_blank">FSGT 73</a><br>
-<a href="https://www.volley.asso.fr">FFVB</a><a class="text-primary" href="https://mobirise.com/mobirise-free-win.zip"></a><br>
+<a href="https://www.volley.asso.fr">FFVB</a><br>
 <a href="http://www.fivb.org" target="_blank">FIVB</a></p><a href="http://www.fivb.org/EN/Volleyball/Rules/Rules.htm">Regles du Volley</a><p></p>
             </div>
 
@@ -79,9 +107,9 @@ Tel: <a href="tel:+33689555081" target="_blank">06 89 55 50 81</a><br></p>
     </div>
 </section>
 
-	<?php include 'footer.html';?>
+	<?php include 'inc/footer.html';?>
 
-	<?php include 'jsscripts.html';?>
+	<?php include 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

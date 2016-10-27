@@ -1,10 +1,10 @@
-<?php include 'header.html';?>
+<?php include 'inc/header.html';?>
 
 <body>
 
-<?php include 'analytics.html';?>
+<?php include 'inc/analytics.html';?>
 
-<?php include 'menubar.html';?>
+<?php include 'inc/menubar.html';?>
 
 <section class="mbr-section mbr-parallax-background" id="page4-msg-box7-0" style="background-image: url(photos/backgrounds/bg_joueurs.jpg); padding-top: 240px; padding-bottom: 240px;">
 
@@ -39,13 +39,13 @@
     <div class="container">
         <p class="text-xs-center"><a href="index.php">Home</a> |
 
-		<?php include 'joueurs_liste.html';?>	
+		<?php include 'inc/joueurs_liste.html';?>	
 	
 		<br>Copyright (c) 2016 Volley La Bridoire.</p>
     </div>
 </footer>
 
-	<?php include 'jsscripts.html';?>
+	<?php include 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

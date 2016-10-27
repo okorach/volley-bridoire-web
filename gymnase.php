@@ -1,10 +1,10 @@
-<?php include 'header.html';?>
+<?php include 'inc/header.html';?>
 
 <body>
 
-<?php include 'analytics.html';?>
+<?php include 'inc/analytics.html';?>
 
-<?php include 'menubar.html';?>
+<?php include 'inc/menubar.html';?>
 
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow" id="header1-0" style="background-image: url(photos/aiguebelette-2-2000x1336-60.jpg);">
 
@@ -42,9 +42,9 @@
 
 </section>
 
-	<?php include 'footer.html';?>
+	<?php include 'inc/footer.html';?>
 
-	<?php include 'jsscripts.html';?>
+	<?php include 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

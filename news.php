@@ -62,7 +62,7 @@ foreach ($files as $file)
 		if (($matches[1] == $saison && $matches[2] >= 8) || ($matches[1] == ($saison+1) && $matches[2] <= 7))
 		{
 			echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-			include($file);
+			include("news/".$file);
 			echo "</div> </div> </div> <p></p>\n";
 		}
 	}

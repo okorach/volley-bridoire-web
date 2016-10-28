@@ -15,6 +15,11 @@
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Sites des autres clubs de Volley FSGT Savoie</strong><br>
+<a class="text-primary" href="http://volleyclubbassens73.e-monsite.com/" target="_blank">VC Bassens</a><br>
+<a class="text-primary" href="http://touvetvolleyball.blogspot.fr/" target="_blank">Touvet VB</a><br>
+<a class="text-primary" href="http://asvolleysaintgenixaoste.clubeo.com/" target="_blank">AS St Genix / Aoste</a><br>
+<a class="text-primary" href="https://sites.google.com/site/volleyballpont/" target="_blank">VB Pont de Beauvoisin</a><br>
+<a class="text-primary" href="http://www.volleyclub-bourg.com/" target="_blank">VC Bourg St Maurice</a><br>
 A venir<br>
 </p>
             </div>

@@ -30,7 +30,6 @@
 					<a class="btn btn-lg btn-primary" href="gymnase.php">Ou jouons nous</a>
 					<a class="btn btn-lg btn-primary" href="photos.php">Album photos</a>
 					<a class="btn btn-lg btn-primary" href="joueurs.php">Joueurs</a>
-					<!--a class="btn btn-lg btn-white btn-white-outline" href="https://mobirise.com">CLICK TO EDIT</a-->
 					</div>
                 </div>
             </div>
@@ -57,7 +56,7 @@ foreach ($files as $file)
 	if ($lastNewsDisplayed == false && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) )
 	{
 		echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-		include($file);
+		include("news/".$file);
 		echo "</div> </div> </div> <p></p>\n";
 		$lastNewsDisplayed = true;
 	}

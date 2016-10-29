@@ -30,7 +30,7 @@
 					<a class="btn btn-lg btn-primary" href="news.php">News</a>
 					<a class="btn btn-lg btn-primary" href="gymnase.php">Ou jouons nous</a>
 					<a class="btn btn-lg btn-primary" href="photos.php">Album photos</a>
-					<a class="btn btn-lg btn-primary" href="joueurs.php">Joueurs</a>
+					<a class="btn btn-lg btn-primary" href="joueur.php">Joueurs</a>
 					</div>
 -->
                 </div>

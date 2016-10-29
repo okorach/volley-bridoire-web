@@ -38,7 +38,7 @@ if (! file_exists($player_pic) ) {
 
 <?php
 	include($player_bio);
-	include 'joueurs_liste.html';
+	include 'inc/joueurs_liste.html';
 ?>
 
                   </div>

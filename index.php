@@ -24,6 +24,7 @@
 					Bienvenue au club de La Bridoire.
 					<br>Nous sommes un petit groupe d'une douzaine de joueurs en manque de volley dans la région et nous avons créé ce club il y a 8 ans.
 					<br>Nous sommes engagés dans un championnat (FSGT Savoie) pour un peu de compétition, mais l'important reste la bonne humeur et le plaisir du jeu.<br></p>
+<!--
                     <div class="mbr-section-btn">
 					<a class="btn btn-lg btn-primary" href="contacts.php">Contacts</a>
 					<a class="btn btn-lg btn-primary" href="news.php">News</a>
@@ -31,6 +32,7 @@
 					<a class="btn btn-lg btn-primary" href="photos.php">Album photos</a>
 					<a class="btn btn-lg btn-primary" href="joueurs.php">Joueurs</a>
 					</div>
+-->
                 </div>
             </div>
         </div>
@@ -40,8 +42,22 @@
 
 </section>
 
-<section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(204, 204, 204); padding-top: 20px; padding-bottom: 20px;">
+<!--section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(204, 204, 204); padding-top: 20px; padding-bottom: 20px;"-->
 
+<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="twitter-feed-block-1" style="background-color: rgb(255, 255, 255);">
+            
+        <div class="row">
+            <div class="col-xs-12 col-md-6 lead">
+               <div class="container">
+                   <div class="mbr-section__container mbr-section__container--isolated">
+                       <div class="twitterFeed text-center"><a name="twitter"><a class="twitter-timeline" href="https://twitter.com/volleybridoire" data-widget-id="670227744614187012" data-screen-name="volleybridoire" data-theme="light" width="520" height="600">Tweets by @VolleyBridoire</a></div>
+                   </div>	
+			      </div>
+		     </div>
+            <div class="col-xs-12 col-md-6 lead">
+               <div class="container">
+                   <div class="mbr-section__container mbr-section__container--isolated">
+                        <div class="foo">
 <?php
 
 $dh  = opendir('news');
@@ -62,6 +78,11 @@ foreach ($files as $file)
 	}
 }
 ?>
+                   </div>
+               </div>
+            </div>	
+        </div>
+    </div>
 </section>
 
 <section class="mbr-section mbr-section-md-padding mbr-after-navbar" id="page3-social-buttons1-0" style="background-color: rgb(255, 255, 255); padding-top: 90px; padding-bottom: 90px;">
@@ -95,6 +116,7 @@ foreach ($files as $file)
 	<?php include 'inc/footer.html';?>
 
 	<?php include 'inc/jsscripts.html';?>
+   <script src="https://platform.twitter.com/widgets.js"></script>
   
   <input name="animation" type="hidden">
   </body>

@@ -1,0 +1,35 @@
+.scorebox {
+   border-radius: 10px;
+   padding: 10px;
+   width: 120px;
+   height: 60px;
+}
+
+.victory {
+   background: #09bc2d;
+}
+.defeat {
+   background: #f72f07;
+}
+.tiebreak {
+   background: #f4ba1a;
+}
+
+table {
+   border-collapse: separate;
+   border-spacing: 10px;
+}
+th, td {
+   padding: 5px;
+}
+
+.rTable { display: table; border-spacing: 10px 20px; }
+.rTableRow { display: table-row; }
+.rTableHeading { display: table-header-group; }
+.rTableBody { display: table-row-group; }
+.rTableFoot { display: table-footer-group; }
+.rTableCell, .rTableHead { display: table-cell; padding: 10px 10px; text-align: center; }
+.cellDate { max-width:100; margin:auto; }
+.cellTeam { max-width:120; margin:auto; }
+.cellScore { max-width:80; margin:auto; }
+

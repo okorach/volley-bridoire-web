@@ -30,6 +30,12 @@
 .tiebreak {
    background: #f4ba1a;
 }
+.unknown {
+   border:3px;
+   border-style:solid;
+   border-color:#444444;
+   background: #AEAEAE;
+}
 
 table {
    border-collapse: separate;

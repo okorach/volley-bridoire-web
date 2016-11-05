@@ -1,14 +1,30 @@
+.vcb-score {
+  font-size: 2rem;
+  font-weight: bold;
+  /* letter-spacing: -2px; */
+  margin-bottom: 0.2843em;
+  margin-top: 1.5rem; }
+
+.vcb-team {
+  font-size: 1.5rem;
+  font-weight: normal;
+  /* letter-spacing: -2px; */
+  margin-bottom: 0.2843em;
+  margin-top: 1.5rem; }
+
+/*
 .scorebox {
    border-radius: 10px;
    padding: 10px;
    width: 120px;
    height: 60px;
 }
+*/
 
-.victory {
+.win {
    background: #09bc2d;
 }
-.defeat {
+.loss {
    background: #f72f07;
 }
 .tiebreak {
@@ -23,13 +39,42 @@ th, td {
    padding: 5px;
 }
 
-.rTable { display: table; border-spacing: 10px 20px; }
-.rTableRow { display: table-row; }
+.scoretable {
+   display: table;
+   border-spacing: 10px 20px;
+}
+/*
 .rTableHeading { display: table-header-group; }
 .rTableBody { display: table-row-group; }
 .rTableFoot { display: table-footer-group; }
-.rTableCell, .rTableHead { display: table-cell; padding: 10px 10px; text-align: center; }
-.cellDate { max-width:100; margin:auto; }
-.cellTeam { max-width:120; margin:auto; }
-.cellScore { max-width:80; margin:auto; }
+*/
+
+.gamerow {
+   display: table-row;
+}
+
+.scoretablecell {
+   display: table-cell;
+   padding: 10px 10px;
+   text-align: center;
+}
+.gamedate {
+   max-width:60px;
+	margin:auto;
+}
+.team {
+   width:120px;
+}
+.team2 {
+   max-width:120px;
+   margin:auto;
+}
+.score {
+   /* max-width:80;
+   margin:auto; */
+   border-radius: 10px;
+   /* padding: 10px; */
+   width: 80px;
+   height: 50px;
+}
 

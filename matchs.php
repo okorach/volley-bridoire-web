@@ -50,7 +50,9 @@ fclose($fh);
 echo "<div class=\"scoretable\">\n";
 for ($i=0; $i<count($score); $i++)
 {
-	if ($eqdom[$i] == 'VCB') {
+	if ($score[$i] == "") {
+		$res = 'unknown';
+	} else if ($eqdom[$i] == 'VCB') {
 		if (preg_match('/3\//', $score[$i])) {
 			$res = 'win';
 		} else if (preg_match('/2\/3/', $score[$i])) {

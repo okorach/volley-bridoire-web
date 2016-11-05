@@ -111,6 +111,9 @@ while (false !== ($line = fgets($fh))) {
 }
 fclose($fh);
 
+$maxGames = 3;
+$nbGames = 0;
+
 echo "<div class=\"scoretable\">\n";
 for ($i=0; $i<count($score); $i++)
 {
@@ -127,21 +130,22 @@ for ($i=0; $i<count($score); $i++)
 	} else {
 		if (preg_match('/\/3/', $score[$i])) {
 			$res = 'win';
-	      	} else if (preg_match('/3\/2/', $score[$i])) {
+	   } else if (preg_match('/3\/2/', $score[$i])) {
 			$res = 'tiebreak';
-		} edjfkdlhsfldj:wq
-se {
+		} else {
 			$res = 'loss';
 		}
 	}
-	echo "<div class=\"gamerow\">\n";
-	echo "   <div class=\"scoretablecell gamedate\">$datematch[$i]</div>\n";
-	echo "   <div class=\"scoretablecell team vcb-team\">$eqdom[$i]</div>\n";
-	echo "   <div class=\"scoretablecell score vcb-score $res\">$score[$i]</div>\n";
-	echo "   <div class=\"scoretablecell team vcb-team\">$eqvis[$i]</div>\n";
-	#echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
-	echo "</div>\n";
-
+	if ($nbGames < $maxGames && ($i+1==count($score) || ($i+1<count($score) && $score[$i+1] != ''))) {
+      $nbGames++;
+	   echo "<div class=\"gamerow\">\n";
+	   echo "   <div class=\"scoretablecell gamedate\">$datematch[$i]</div>\n";
+	   echo "   <div class=\"scoretablecell team vcb-team\">$eqdom[$i]</div>\n";
+	   echo "   <div class=\"scoretablecell score vcb-score $res\">$score[$i]</div>\n";
+	   echo "   <div class=\"scoretablecell team vcb-team\">$eqvis[$i]</div>\n";
+	   #echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
+	   echo "</div>\n";
+   }
 }
 echo "</div>\n";
 

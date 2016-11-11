@@ -65,8 +65,8 @@ th, td {
    text-align: center;
 }
 .gamedate {
-   max-width:60px;
-	margin:auto;
+   max-width:80px;
+   margin:auto;
 }
 .team {
    width:120px;

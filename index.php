@@ -141,7 +141,7 @@ for ($i=0; $i<count($score); $i++)
 	   echo "<div class=\"gamerow\">\n";
 	   echo "   <div class=\"scoretablecell gamedate\">$datematch[$i]</div>\n";
 	   echo "   <div class=\"scoretablecell team vcb-team\">$eqdom[$i]</div>\n";
-	   echo "   <div class=\"scoretablecell score vcb-score $res\">$score[$i]</div>\n";
+	   echo "   <div class=\"scoretablecell score vcb-score $res\" title=\"$sets[$i]\">$score[$i]</div>\n";
 	   echo "   <div class=\"scoretablecell team vcb-team\">$eqvis[$i]</div>\n";
 	   #echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
 	   echo "</div>\n";

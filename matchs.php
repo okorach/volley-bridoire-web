@@ -15,7 +15,7 @@ if (isset($_GET['saison'])) {
 $nextyear = $saison+1;
 ?>
 
-<section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-0" style="background-image: url(assets/images/desert.jpg); padding-top: 160px; padding-bottom: 120px;">
+<section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-0" style="background-image: url(assets/images/desert.jpg); padding-top: 80px; padding-bottom: 40px;">
 
     <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);">
     </div>
@@ -31,13 +31,13 @@ $nextyear = $saison+1;
 
 </section>
 
-<section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(204, 204, 204); padding-top: 20px; padding-bottom: 20px;">
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="planning_matchs" style="background-image: url(photos/backgrounds/bg_joueur_attack.jpg);">
 
 <?php
 
 $fh = fopen("matchs.csv", "r");
 while (false !== ($line = fgets($fh))) {
-	$data = preg_split('/\s*,\s*/', $line);
+	$data = preg_split('/\s*,\s*/', trim($line));
 	#print_r($data);
    $datematch[] = $data[0];
    $eqdom[] = $data[1];
@@ -72,7 +72,7 @@ for ($i=0; $i<count($score); $i++)
 	echo "<div class=\"gamerow\">\n";
 	echo "   <div class=\"scoretablecell gamedate\">$datematch[$i]</div>\n";
 	echo "   <div class=\"scoretablecell team vcb-team\">$eqdom[$i]</div>\n";
-	echo "   <div class=\"scoretablecell score vcb-score $res\">$score[$i]</div>\n";
+	echo "   <div class=\"scoretablecell score vcb-score $res\" title=\"$sets[$i]\">$score[$i]</div>\n";
 	echo "   <div class=\"scoretablecell team vcb-team\">$eqvis[$i]</div>\n";
 	#echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
 	echo "</div>\n";

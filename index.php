@@ -152,6 +152,7 @@ echo "</div>\n";
 ?>
     </div>
 </div>
+<center><a href="matchs.php">Tous les r&eacute;sultats</a></center>
 
 </section>
 

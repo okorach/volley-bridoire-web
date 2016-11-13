@@ -71,7 +71,7 @@ class LinkList
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
-                <div><img src="logo400x400.jpg" width="200" height="200" style="-webkit-border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;border-radius: 20px 20px 20px 20px;-webkit-box-shadow: #B3B3B3 8px 8px 8px;-moz-box-shadow: #B3B3B3 8px 8px 8px; box-shadow: #B3B3B3 8px 8px 8px;">
+                <div><img src="assets/images/logo400x400.jpg" width="200" height="200" style="-webkit-border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;border-radius: 20px 20px 20px 20px;-webkit-box-shadow: #B3B3B3 8px 8px 8px;-moz-box-shadow: #B3B3B3 8px 8px 8px; box-shadow: #B3B3B3 8px 8px 8px;">
 					 </div>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">

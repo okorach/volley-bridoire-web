@@ -31,51 +31,61 @@ $nextyear = $saison+1;
 
 </section>
 
+<style>
+div.transbox {
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+</style>
+
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="planning_matchs" style="background-image: url(photos/backgrounds/bg_joueur_attack.jpg);">
 
 <?php
 
 $fh = fopen("matchs.csv", "r");
 while (false !== ($line = fgets($fh))) {
-	$data = preg_split('/\s*,\s*/', trim($line));
-	#print_r($data);
+   $data = preg_split('/\s*,\s*/', trim($line));
+   #print_r($data);
    $datematch[] = $data[0];
    $eqdom[] = $data[1];
    $eqvis[] = $data[2];
    $score[] = $data[3];
-	$sets[] = $data[4];
+   $sets[] = $data[4];
 }
 fclose($fh);
 
-echo "<div class=\"scoretable\">\n";
+echo "<div class=\"scoretable transbox\">\n";
 for ($i=0; $i<count($score); $i++)
 {
-	if ($score[$i] == "") {
-		$res = 'unknown';
-	} else if ($eqdom[$i] == 'VCB') {
-		if (preg_match('/3\//', $score[$i])) {
-			$res = 'win';
-		} else if (preg_match('/2\/3/', $score[$i])) {
-			$res = 'tiebreak';
-		} else {
-			$res = 'loss';
-		}
-	} else {
-		if (preg_match('/\/3/', $score[$i])) {
-			$res = 'win';
-		} else if (preg_match('/3\/2/', $score[$i])) {
-			$res = 'tiebreak';
-		} else {
-			$res = 'loss';
-		}
-	}
-	echo "<div class=\"gamerow\">\n";
-	echo "   <div class=\"scoretablecell gamedate\">$datematch[$i]</div>\n";
-	echo "   <div class=\"scoretablecell team vcb-team\">$eqdom[$i]</div>\n";
-	echo "   <div class=\"scoretablecell score vcb-score $res\" title=\"$sets[$i]\">$score[$i]</div>\n";
-	echo "   <div class=\"scoretablecell team vcb-team\">$eqvis[$i]</div>\n";
-	#echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
-	echo "</div>\n";
+   if ($score[$i] == "") {
+      $res = 'unknown';
+   } else if ($eqdom[$i] == 'VCB') {
+      if (preg_match('/3\//', $score[$i])) {
+         $res = 'win';
+      } else if (preg_match('/2\/3/', $score[$i])) {
+         $res = 'tiebreak';
+      } else {
+         $res = 'loss';
+      }
+   } else {
+      if (preg_match('/\/3/', $score[$i])) {
+         $res = 'win';
+      } else if (preg_match('/3\/2/', $score[$i])) {
+         $res = 'tiebreak';
+      } else {
+         $res = 'loss';
+      }
+   }
+   echo "<div class=\"gamerow\">\n";
+   echo "   <div class=\"scoretablecell gamedate\">$datematch[$i]</div>\n";
+   echo "   <div class=\"scoretablecell team vcb-team\">$eqdom[$i]</div>\n";
+   echo "   <div class=\"scoretablecell score vcb-score $res\" title=\"$sets[$i]\">$score[$i]</div>\n";
+   echo "   <div class=\"scoretablecell team vcb-team\">$eqvis[$i]</div>\n";
+   #echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
+   echo "</div>\n";
 
 }
 echo "</div>\n";
@@ -86,9 +96,9 @@ echo "</div>\n";
 
 </section>
 
-	<?php include 'inc/footer.html';?>
+   <?php include 'inc/footer.html';?>
 
-	<?php include 'inc/jsscripts.html';?>
+   <?php include 'inc/jsscripts.html';?>
    <script src="https://platform.twitter.com/widgets.js"></script>
   
   <input name="animation" type="hidden">

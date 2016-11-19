@@ -100,22 +100,37 @@ foreach ($files as $file)
 
 <?php
 
-$fh = fopen("matchs.csv", "r");
-while (false !== ($line = fgets($fh))) {
-   $data = preg_split('/\s*,\s*/', $line);
-   #print_r($data);
-   $datematch[] = $data[0];
-   $eqdom[] = $data[1];
-   $eqvis[] = $data[2];
-   $score[] = $data[3];
-   $sets[] = $data[4];
+ini_set('display_errors', 1);
+ini_set('log_errors', 1); 
+error_reporting(E_ALL | E_STRICT);
+
+if (! ($link = mysql_connect('sql.free.fr', 'volley.bridoire', 'lhassa73')) ) {
+   echo( '3 Unable to connect to database: '.mysql_error().'"'."\n");
 }
-fclose($fh);
+
+if ( !  mysql_select_db('volley.bridoire') ) {
+   die( 'Unable to select database: "'.mysql_error().'"'."\n");
+}
+$result=mysql_query('select * from matchs');
+
+$n = mysql_numrows($result);
+for ($i = 0; $i < $n; $i++)
+{
+   $a = preg_split("/-/", mysql_result($result,$i,'date_match'));
+   $a[0] = $a[0] % 100;
+   $datematch[] = $a[2]."/".$a[1]."/".$a[0];
+   $eqdom[] = mysql_result($result,$i,'equipe_domicile');
+   $eqvis[] = mysql_result($result,$i,'equipe_visiteur');
+   $score[] = mysql_result($result,$i,'score1');
+   $sets[] = mysql_result($result,$i,'score2');
+}
+mysql_close($link);
 
 $maxGames = 3;
 $nbGames = 0;
 
 echo "<div class=\"scoretable\">\n";
+
 for ($i=0; $i<count($score); $i++)
 {
    if ($score[$i] == '') {

@@ -1,18 +1,14 @@
-<?php include 'inc/header.html';?>
+<?php require_once 'inc/header.html';?>
 
 <body>
 
-<?php include 'inc/analytics.html';?>
+<?php include_once 'inc/analytics.html';?>
 
-<?php include 'inc/menubar.html';?>
+<?php require_once 'inc/menubar.html';?>
 
 <?php
-if (isset($_GET['id'])) {
-	$id = $_GET['id'];
-} else {
-	$id = "olivier";
-}
-echo "ID = ".$id;
+$id = ($id = filter_input(INPUT_GET, 'id')) ? $id : 'olivier';
+$id = filter_var($id, FILTER_SANITIZE_STRING);
 
 $player_bio = 'joueurs/bio_'.$id.".html";
 if (! file_exists($player_bio) ) {
@@ -37,7 +33,7 @@ if (! file_exists($player_pic) ) {
               <div class="mbr-table-cell oko-player col-md-6 text-xs-center text-md-left">
 
 <?php
-	include($player_bio);
+	include_once($player_bio);
 	include 'inc/joueurs_liste.html';
 ?>
 
@@ -60,7 +56,7 @@ if (! file_exists($player_pic) ) {
     </div>
 </footer>
 
-	<?php include 'inc/jsscripts.html';?>
+	<?php include_once 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

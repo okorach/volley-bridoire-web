@@ -1,10 +1,10 @@
-<?php include 'inc/header.html';?>
+<?php require_once 'inc/header.html';?>
 
 <body>
 
-<?php include 'inc/analytics.html';?>
+<?php include_once 'inc/analytics.html';?>
 
-<?php include 'inc/menubar.html';?>
+<?php require_once 'inc/menubar.html';?>
 
 <section class="mbr-slider mbr-section mbr-section__container carousel slide mbr-section-nopadding mbr-after-navbar" data-ride="carousel" data-keyboard="false" data-wrap="true" data-pause="false" data-interval="5000" id="page1-slider3-0">
     <div>
@@ -70,9 +70,9 @@ for ($i = 0; $i < count($photos); $i++)
 </section>
 
 
-	<?php include 'inc/footer.html';?>
+	<?php include_once 'inc/footer.html';?>
 
-	<?php include 'inc/jsscripts.html';?>
+	<?php include_once 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

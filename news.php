@@ -1,17 +1,14 @@
-<?php include 'inc/header.html';?>
+<?php require_once 'inc/header.html';?>
 
 <body>
 
-<?php include 'inc/analytics.html';?>
+<?php include_once 'inc/analytics.html';?>
 
-<?php include 'inc/menubar.html';?>
+<?php require_once 'inc/menubar.html';?>
 
 <?php
-if (isset($_GET['saison'])) {
-   $saison = $_GET['saison'];
-} else {
-   $saison = 2016;
-}
+$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2016';
+$saison = filter_var($saison, FILTER_SANITIZE_STRING);
 $nextyear = $saison+1;
 ?>
 
@@ -49,7 +46,7 @@ foreach ($files as $file)
       if (($matches[1] == $saison && $matches[2] >= 8) || ($matches[1] == ($saison+1) && $matches[2] <= 7))
       {
          echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-         include("news/".$file);
+         include_once("news/".$file);
          echo "</div> </div> </div> <p></p>\n";
       }
    }
@@ -77,9 +74,9 @@ foreach ($files as $file)
 
 </section>
 
-   <?php include 'inc/footer.html';?>
+   <?php include_once 'inc/footer.html';?>
 
-   <?php include 'inc/jsscripts.html';?>
+   <?php include_once 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

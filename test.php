@@ -1,10 +1,10 @@
-<?php include 'inc/header.html';?>
+<?php require_once 'inc/header.html';?>
 
 <body>
 
-<?php include 'inc/analytics.html';?>
+<?php include_once 'inc/analytics.html';?>
 
-<?php include 'inc/menubar.html';?>
+<?php require_once 'inc/menubar.html';?>
 
 <!------------------------------ INTRO ---------------------------------->
 
@@ -85,7 +85,7 @@ foreach ($files as $file)
 	if ($lastNewsDisplayed == false && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) )
 	{
 		echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-		include("news/".$file);
+		include_once("news/".$file);
 		echo "</div> </div>\n";
 		$lastNewsDisplayed = true;
 	}
@@ -178,9 +178,9 @@ echo "</div>\n";
     </div>
 </section>
 
-	<?php include 'inc/footer.html';?>
+	<?php include_once 'inc/footer.html';?>
 
-	<?php include 'inc/jsscripts.html';?>
+	<?php include_once 'inc/jsscripts.html';?>
    <script src="https://platform.twitter.com/widgets.js"></script>
   
   <input name="animation" type="hidden">

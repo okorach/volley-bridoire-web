@@ -1,19 +1,15 @@
-
-<?php include 'inc/header.html';?>
+<?php require_once 'inc/header.html';?>
 
 <body>
 
 <?php
-include 'inc/analytics.html';
-include 'inc/menubar.html';
+include_once 'inc/analytics.html';
+require_once 'inc/menubar.html';
 ?>
 
 <?php
-if (isset($_GET['saison'])) {
-   $saison = $_GET['saison'];
-} else {
-   $saison = 2016;
-}
+$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2016';
+$saison = filter_var($saison, FILTER_SANITIZE_STRING);
 $nextyear = $saison+1;
 ?>
 
@@ -47,31 +43,31 @@ div.transbox {
 
 <?php
 
-include 'lib/game.php';
+require_once 'lib/game.php';
 $gamelist = Game::ReadFromDB();
 
 echo "<div class=\"scoretable transbox\">\n";
 foreach ($gamelist as $game)
 {
-	$w = $game->winner();
-	if ($w == '') {
-		$res = 'unknown';
-	} elseif ($w == 'VCB') {
-		$res = 'win';
-	} else {
-		if (preg_match('/(3\/2|2\/3)/', $game->getScore())) {
-			$res = 'tiebreak';
-		} else {
-			$res = 'loss';
-		}
-	} 
-	echo "<div class=\"gamerow\">\n";
-	echo "   <div class=\"scoretablecell gamedate\">".$game->getDate('%d/%m/%y')."</div>\n";
-	echo "   <div class=\"scoretablecell team vcb-team\">".$game->getHomeTeam()."</div>\n";
-	echo "   <div class=\"scoretablecell score vcb-score $res\" title=\"".$game->getSets()."\">".$game->getScore()."</div>\n";
-	echo "   <div class=\"scoretablecell team vcb-team\">".$game->getAwayTeam()."</div>\n";
-	#echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
-	echo "</div>\n";
+   $w = $game->winner();
+   if ($w == '') {
+      $res = 'unknown';
+   } elseif ($w == 'VCB') {
+      $res = 'win';
+   } else {
+      if (preg_match('/(3\/2|2\/3)/', $game->getScore())) {
+         $res = 'tiebreak';
+      } else {
+         $res = 'loss';
+      }
+   } 
+   echo "<div class=\"gamerow\">\n";
+   echo "   <div class=\"scoretablecell gamedate\">".$game->getDate('%d/%m/%y')."</div>\n";
+   echo "   <div class=\"scoretablecell team vcb-team\">".$game->getHomeTeam()."</div>\n";
+   echo "   <div class=\"scoretablecell score vcb-score $res\" title=\"".$game->getSets()."\">".$game->getScore()."</div>\n";
+   echo "   <div class=\"scoretablecell team vcb-team\">".$game->getAwayTeam()."</div>\n";
+   #echo "   <td>$datematch[$i]<br>$sets[$i]</td>";
+   echo "</div>\n";
 
 }
 echo "</div>\n";
@@ -82,9 +78,9 @@ echo "</div>\n";
 
 </section>
 
-	<?php include 'inc/footer.html';?>
+   <?php include_once 'inc/footer.html';?>
 
-	<?php include 'inc/jsscripts.html';?>
+   <?php include_once 'inc/jsscripts.html';?>
    <script src="https://platform.twitter.com/widgets.js"></script>
   
   <input name="animation" type="hidden">

@@ -1,10 +1,10 @@
-<?php include 'inc/header.html';?>
+<?php require_once 'inc/header.html';?>
 
 <body>
 
-<?php include 'inc/analytics.html';?>
+<?php include_once 'inc/analytics.html';?>
 
-<?php include 'inc/menubar.html';?>
+<?php require_once 'inc/menubar.html';?>
 
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-after-navbar" id="header1-0" style="background-image: url(photos/perso/vcb-2014-2.jpg);">
 
@@ -29,9 +29,9 @@
 
 </section>
 
-	<?php include 'inc/footer.html';?>
+	<?php include_once 'inc/footer.html';?>
 
-	<?php include 'inc/jsscripts.html';?>
+	<?php include_once 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

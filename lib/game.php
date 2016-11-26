@@ -1,5 +1,16 @@
 <?php
 
+require_once 'db.php';
+
+class Game
+{
+
+   private $gamedate;
+   private $homeTeam;
+   private $awayTeam;
+   private $score;
+   private $sets;
+   
 /*
 function iso($date)
 {
@@ -19,15 +30,6 @@ function french_short($date)
 include('DateTime.php');
 */
 
-class Game
-{
-
-   private $gamedate;
-   private $homeTeam;
-   private $awayTeam;
-   private $score;
-   private $sets;
-   
    function __construct($datestring, $eq1, $eq2, $score, $sets)
    {
       $this->gamedate = strtotime($datestring);
@@ -64,8 +66,7 @@ class Game
 
    public static function ReadFromDB()
    {
-      mysql_connect('sql.free.fr', 'volley.bridoire', 'lhassa73') or die('Unable to connect to database: '.mysql_error().'"'."\n");
-      mysql_select_db('volley.bridoire') or  die( 'Unable to select database: "'.mysql_error().'"'."\n");
+      opendb();
       $result = mysql_query('select * from matchs');
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++)
@@ -77,17 +78,16 @@ class Game
             mysql_result($result,$i,'score1'),
             mysql_result($result,$i,'score2'));
       }
-      mysql_close();
+      closedb();
       return $list;
    }
-	public static function GetUnplayedGames($nbGames = 0)
-	{
-      mysql_connect('sql.free.fr', 'volley.bridoire', 'lhassa73') or die('Unable to connect to database: '.mysql_error().'"'."\n");
-      mysql_select_db('volley.bridoire') or  die( 'Unable to select database: "'.mysql_error().'"'."\n");
+   public static function GetUnplayedGames($nbGames = 0)
+   {
+      opendb();
       $query = "select * from matchs where score1 = '' order by date_match";
-		if ($nbGames > 0) {
-			$query .= " limit $nbGames";
-		}
+      if ($nbGames > 0) {
+         $query .= " limit $nbGames";
+      }
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++)
@@ -98,17 +98,16 @@ class Game
             mysql_result($result,$i,'equipe_visiteur'),
             '', '');
       }
-      mysql_close();
-		return $list;
-	}
-	public static function GetLastPlayedGames($nbGames = 0)
-	{
-      mysql_connect('sql.free.fr', 'volley.bridoire', 'lhassa73') or die('Unable to connect to database: '.mysql_error().'"'."\n");
-      mysql_select_db('volley.bridoire') or  die( 'Unable to select database: "'.mysql_error().'"'."\n");
+      closedb();
+      return $list;
+   }
+   public static function GetLastPlayedGames($nbGames = 0)
+   {
+      opendb();
       $query = "select * from matchs where score1 != '' order by date_match desc";
-		if ($nbGames > 0) {
-			$query .= " limit $nbGames";
-		}
+      if ($nbGames > 0) {
+         $query .= " limit $nbGames";
+      }
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = $n-1; $i >= 0; $i--)
@@ -120,9 +119,9 @@ class Game
             mysql_result($result,$i,'score1'),
             mysql_result($result,$i,'score2'));
       }
-      mysql_close();
-		return $list;
-	}
+      closedb();
+      return $list;
+   }
 }
 
 ?>

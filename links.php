@@ -37,7 +37,9 @@ END;
                   $links = $list->getLinksByType('Fede');
                   foreach ($links as $link)
                   {
-                     echo '<a class="text-primary" href="'.$link->getUrl().'" target="_blank">'.$link->getTitle().'</a><br>'."\n";
+                     echo '<a class="text-primary" href="'.$link->getUrl().'" target="_blank">';
+                     echo $link->getTitle();
+                     echo '</a><br>'."\n";
                   }
                   echo <<<END
                </p>

@@ -1,37 +1,28 @@
 <?php
+//==============================================================================
+//
+//  Class Game
+//
+//  (c) Olivier Korach 2016 - License MIT
+//
+//  Encapsulates a volleyball game
+//
+//==============================================================================
 
 require_once 'db.php';
 
-class Game
-{
+class Game {
 
    private $gamedate;
    private $homeTeam;
    private $awayTeam;
    private $score;
    private $sets;
-   
-/*
-function iso($date)
-{
-   return format('Y-m-d', $date);
-}
 
-function french($date)
-{
-   return date('d/m/Y', $date);
-}
-
-function french_short($date)
-{
-   return date('d/m/y', $date);
-}
-
-include('DateTime.php');
-*/
-
-   function __construct($datestring, $eq1, $eq2, $score, $sets)
-   {
+   //------------------------------------------------------------------------------
+   //  Constructors
+   //------------------------------------------------------------------------------
+   public function __construct($datestring, $eq1, $eq2, $score, $sets) {
       $this->gamedate = strtotime($datestring);
       $this->homeTeam = $eq1;
       $this->awayTeam = $eq2;
@@ -39,8 +30,48 @@ include('DateTime.php');
       $this->sets = preg_split('/\s+/', $sets);
    }
 
-   function winner()
-   {
+   //------------------------------------------------------------------------------
+   //  Getters
+   //------------------------------------------------------------------------------
+   public function getHomeTeam() {
+      return $this->homeTeam;
+   }
+   public function getAwayTeam() {
+      return $this->awayTeam;
+   }
+   public function getDate($fmt) {
+      return strftime($fmt, $this->gamedate);
+   }
+   public function getScore() {
+      return $this->score;
+   }
+   public function getSets() {
+      return implode(' ', $this->sets);
+   }
+
+   //------------------------------------------------------------------------------
+   //  Setters
+   //------------------------------------------------------------------------------
+   public function setHomeTeam($team) {
+      $this->homeTeam = $team;
+   }
+   public function setAwayTeam($team) {
+      $this->awayTeam = $team;
+   }
+   public function setDate($d) {
+      $this->gamedate = strtotime($d);
+   }
+   public function setScore($score) {
+      $this->score = $score;
+   }
+   public function setSets($sets) {
+      $this->sets = preg_split('/\s+/', $sets);
+   }
+
+   //------------------------------------------------------------------------------
+   //  winner()
+   //------------------------------------------------------------------------------
+   public function winner() {
       if (preg_match('/^\s*$/', $this->score)) {
          return '';
       } else {
@@ -48,29 +79,18 @@ include('DateTime.php');
          return ($home > $away ? $this->homeTeam : $this->awayTeam);
       }
    }
-   function getHomeTeam() {
-      return $this->homeTeam;
-   }
-   function getAwayTeam() {
-      return $this->awayTeam;
-   }
-   function getDate($fmt) {
-      return strftime($fmt, $this->gamedate);
-   }
-   function getScore() {
-      return $this->score;
-   }
-   function getSets() {
-      return implode(' ', $this->sets);
-   }
 
-   public static function ReadFromDB()
-   {
+   //------------------------------------------------------------------------------
+   //  Static public functions
+   //------------------------------------------------------------------------------
+   //------------------------------------------------------------------------------
+   //  ReadFromDB()
+   //------------------------------------------------------------------------------
+   public static function ReadFromDB() {
       opendb();
       $result = mysql_query('select * from matchs');
       $n = mysql_numrows($result);
-      for ($i = 0; $i < $n; $i++)
-      {
+      for ($i = 0; $i < $n; $i++) {
          $list[] = new Game(
             mysql_result($result,$i,'date_match'),
             mysql_result($result,$i,'equipe_domicile'),
@@ -81,8 +101,10 @@ include('DateTime.php');
       closedb();
       return $list;
    }
-   public static function GetUnplayedGames($nbGames = 0)
-   {
+   //------------------------------------------------------------------------------
+   //  GetUnplayedGames()
+   //------------------------------------------------------------------------------
+   public static function GetUnplayedGames($nbGames = 0) {
       opendb();
       $query = "select * from matchs where score1 = '' order by date_match";
       if ($nbGames > 0) {
@@ -90,8 +112,7 @@ include('DateTime.php');
       }
       $result = mysql_query($query);
       $n = mysql_numrows($result);
-      for ($i = 0; $i < $n; $i++)
-      {
+      for ($i = 0; $i < $n; $i++) {
          $list[] = new Game(
             mysql_result($result,$i,'date_match'),
             mysql_result($result,$i,'equipe_domicile'),
@@ -101,6 +122,9 @@ include('DateTime.php');
       closedb();
       return $list;
    }
+   //------------------------------------------------------------------------------
+   //  GetLastPlayedGames()
+   //------------------------------------------------------------------------------
    public static function GetLastPlayedGames($nbGames = 0)
    {
       opendb();
@@ -110,8 +134,7 @@ include('DateTime.php');
       }
       $result = mysql_query($query);
       $n = mysql_numrows($result);
-      for ($i = $n-1; $i >= 0; $i--)
-      {
+      for ($i = $n-1; $i >= 0; $i--) {
          $list[] = new Game(
             mysql_result($result,$i,'date_match'),
             mysql_result($result,$i,'equipe_domicile'),

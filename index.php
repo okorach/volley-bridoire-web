@@ -10,11 +10,11 @@
 
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(assets/images/home_bg.jpg);">
 
-    <div class="mbr-table-cell">
+   <div class="mbr-table-cell">
 
-        <div class="container">
-            <div class="row">
-                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+      <div class="container">
+         <div class="row">
+            <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
                01 octobre 2016: Après 10 ans de bons et loyaux services de l'ancien site,<br>
@@ -35,12 +35,12 @@
                <a class="btn btn-lg btn-primary" href="joueur.php">Joueurs</a>
                </div>
 -->
-                </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 
-    <!--div class="mbr-arrow mbr-arrow-floating" aria-hidden="true"><a href="#footer1-2"><i class="mbr-arrow-icon"></i></a></div-->
+   <!--div class="mbr-arrow mbr-arrow-floating" aria-hidden="true"><a href="#footer1-2"><i class="mbr-arrow-icon"></i></a></div-->
 
 </section>
 
@@ -80,10 +80,8 @@ while (false !== ($filename = readdir($dh))) {
 closedir($dh);
 rsort($files);
 $lastNewsDisplayed = false;
-foreach ($files as $file)
-{
-   if ($lastNewsDisplayed == false && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) )
-   {
+foreach ($files as $file) {
+   if ($lastNewsDisplayed == false && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) ) {
       echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
       include_once("news/".$file);
       echo "</div> </div>\n";
@@ -105,8 +103,7 @@ $gamelist = array_merge(Game::GetLastPlayedGames(2), Game::GetUnplayedGames(1));
 
 echo "<div class=\"scoretable\">\n";
 
-foreach ($gamelist as $game)
-{
+foreach ($gamelist as $game) {
    $w = $game->winner();
    if ($w == '') {
       $res = 'unknown'; 

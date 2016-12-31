@@ -1,24 +1,22 @@
-<?php include 'inc/header.html';?>
+<?php require_once 'inc/header.html';?>
 
 <body>
 
-<?php include 'inc/analytics.html';?>
+<?php include_once 'inc/analytics.html';?>
 
-<?php include 'inc/menubar.html';?>
+<?php require_once 'inc/menubar.html';?>
 
 <?php
-if (isset($_GET['saison'])) {
-   $saison = $_GET['saison'];
-} else {
-   $saison = 2016;
-}
+require_once 'lib/news.php';
+
+$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2016';
+$saison = filter_var($saison, FILTER_SANITIZE_STRING);
 $nextyear = $saison+1;
 ?>
 
 <section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-0" style="background-image: url(assets/images/desert.jpg); padding-top: 160px; padding-bottom: 120px;">
 
-    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);">
-    </div>
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
@@ -35,24 +33,16 @@ $nextyear = $saison+1;
 
 <?php
 
-$dh  = opendir('news');
-while (false !== ($filename = readdir($dh))) {
-    $files[] = $filename;
-}
-closedir($dh);
-rsort($files);
 
-foreach ($files as $file)
+$newslist = News::GetYearNews();
+foreach ($newslist as $news)
 {
-   if (preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) )
-   {
-      if (($matches[1] == $saison && $matches[2] >= 8) || ($matches[1] == ($saison+1) && $matches[2] <= 7))
-      {
-         echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-         include("news/".$file);
-         echo "</div> </div> </div> <p></p>\n";
-      }
-   }
+   echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead">';
+   #include_once("news/".$file);
+   echo "<p><strong>Par ".$news->getAuthor().", le ".$news->getDate("%d/%m/%Y")."</strong></p>\n";
+   echo "<p>\n".$news->getContents()."</p>\n";
+
+   echo "</div> </div> </div> <p></p>\n";
 }
 ?>
 
@@ -77,9 +67,9 @@ foreach ($files as $file)
 
 </section>
 
-   <?php include 'inc/footer.html';?>
+   <?php include_once 'inc/footer.html';?>
 
-   <?php include 'inc/jsscripts.html';?>
+   <?php include_once 'inc/jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

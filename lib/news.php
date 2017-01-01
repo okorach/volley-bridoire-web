@@ -69,11 +69,11 @@ class News
    public function write()
    {
       $this->sanitize();
-      opendb();
+      DbManager::opendb();
       $text = preg_replace("/'/", "''", $this->news_text);
       $q = sprintf("INSERT INTO news (date_news, author, contents) VALUES ('%s', '%s', '%s')", $this->newsdate, $this->author, $text);
       $result = mysql_query($q);
-      closedb();
+      DbManager::closedb();
       if ($result == false)
       {
          throw new DbException('Unable to write to DB: '.mysql_error());
@@ -94,7 +94,7 @@ class News
    //------------------------------------------------------------------------------
    private static function runSelect($q)
    {
-      opendb();
+      DbManager::opendb();
       $result = mysql_query('SELECT * FROM news '.$q);
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++)
@@ -104,7 +104,7 @@ class News
             mysql_result($result,$i,'author'),
             mysql_result($result,$i,'contents'));
       }
-      closedb();
+      DbManager::closedb();
       return $list;
    }
    //------------------------------------------------------------------------------

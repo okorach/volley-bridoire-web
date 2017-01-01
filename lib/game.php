@@ -87,7 +87,7 @@ class Game {
    //  ReadFromDB()
    //------------------------------------------------------------------------------
    public static function ReadFromDB() {
-      opendb();
+      DbManager::opendb();
       $result = mysql_query('select * from matchs');
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++) {
@@ -98,14 +98,14 @@ class Game {
             mysql_result($result,$i,'score1'),
             mysql_result($result,$i,'score2'));
       }
-      closedb();
+      DbManager::closedb();
       return $list;
    }
    //------------------------------------------------------------------------------
    //  GetUnplayedGames()
    //------------------------------------------------------------------------------
    public static function GetUnplayedGames($nbGames = 0) {
-      opendb();
+      DbManager::opendb();
       $query = "select * from matchs where score1 = '' order by date_match";
       if ($nbGames > 0) {
          $query .= " limit $nbGames";
@@ -119,7 +119,7 @@ class Game {
             mysql_result($result,$i,'equipe_visiteur'),
             '', '');
       }
-      closedb();
+      DbManager::closedb();
       return $list;
    }
    //------------------------------------------------------------------------------
@@ -127,7 +127,7 @@ class Game {
    //------------------------------------------------------------------------------
    public static function GetLastPlayedGames($nbGames = 0)
    {
-      opendb();
+      DbManager::opendb();
       $query = "select * from matchs where score1 != '' order by date_match desc";
       if ($nbGames > 0) {
          $query .= " limit $nbGames";
@@ -142,7 +142,7 @@ class Game {
             mysql_result($result,$i,'score1'),
             mysql_result($result,$i,'score2'));
       }
-      closedb();
+      DbManager::closedb();
       return $list;
    }
 }

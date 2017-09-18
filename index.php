@@ -17,11 +17,13 @@
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-                Assembl&eacute;e Générale du club le 20 septembre 2017 à 20h30 au <a href="gymnases.php">gymnase de Rochassieux</a>
-                 <br>
-  <!--             01 octobre 2016: Après 10 ans de bons et loyaux services de l'ancien site,<br>
+            Assemblée Générale du Club le 20 septembre à 20h30 au <a href="gymnases.php">Gymnase de Rochassieux</a>
+            <br>
+            Tous les licenciés sont convoqués.
+<!--
+               01 octobre 2016: Après 10 ans de bons et loyaux services de l'ancien site,<br>
                ouverture en grande pompe du nouveau site du...
-               -->
+-->
             </p>
                     <h2 class="mbr-section-title display-1">Volleyball La Bridoire</h2>
                     <p class="mbr-section-lead lead">

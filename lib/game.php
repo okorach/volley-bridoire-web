@@ -88,7 +88,7 @@ class Game {
    //------------------------------------------------------------------------------
    public static function ReadFromDB() {
       DbManager::opendb();
-      $result = mysql_query('select * from matchs');
+      $result = mysql_query('select * from matchs order by date_match');
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++) {
          $list[] = new Game(

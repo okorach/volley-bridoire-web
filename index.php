@@ -84,7 +84,7 @@ closedir($dh);
 rsort($files);
 $lastNewsDisplayed = false;
 foreach ($files as $file) {
-   if ($lastNewsDisplayed == false && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) ) {
+   if (! $lastNewsDisplayed && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) ) {
       echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
       include_once("news/".$file);
       echo "</div> </div>\n";
@@ -110,7 +110,7 @@ foreach ($gamelist as $game) {
    $w = $game->winner();
    if ($w == '') {
       $res = 'unknown'; 
-   } elseif ($w == 'VCB') {
+   } elseif ($w == 'VCB' || $w == 'La Bridoire') {
       $res = 'win';
    } else {
       if (preg_match('/(3\/2|2\/3)/', $game->getScore())) {

@@ -52,7 +52,7 @@ foreach ($gamelist as $game)
    $w = $game->winner();
    if ($w == '') {
       $res = 'unknown';
-   } elseif ($w == 'VCB') {
+   } elseif ($w == 'VCB' || $w == 'La Bridoire') {
       $res = 'win';
    } else {
       if (preg_match('/(3\/2|2\/3)/', $game->getScore())) {

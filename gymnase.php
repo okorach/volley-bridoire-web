@@ -16,13 +16,13 @@
             <h1 class="mbr-section-title display-1">Ou nous retrouver ?</h1>
             <p class="mbr-section-lead lead"><br>
 			Nous nous entrainons et nous jouons nos matchs à domicile<br>le mardi soir à partir de 20h30<br>au
-			<a href="https://www.google.fr/maps/dir/Chamb%C3%A9ry/45.5334845,5.7417367/@45.5308466,5.7361098,15z/data=!4m8!4m7!1m5!1m1!1s0x478ba85708695f63:0xd5c21acfa63d899c!2m2!1d5.917781!2d45.564601!1m0?hl=fr" target="_blank"><b>Gymnase de Rochassieux à La Bridoire</b></a>.
-			<br>L'hiver il nous arrive de jouer à la<br> <a href="https://www.google.fr/maps/dir/Chamb%C3%A9ry/45.553073,5.7826093/@45.5516486,5.7770732,17z/data=!3m1!4b1!4m9!4m8!1m5!1m1!1s0x478ba85708695f63:0xd5c21acfa63d899c!2m2!1d5.917781!2d45.564601!1m0!3e0" target="_blank"><b>Salle Francois Cachoud à St Alban de Montbel</b></a>.<br>Pour voir ou cela se trouve cliquer sur les lien ci-dessus ou voir les plan ci-dessous.</p>
+			<a href="https://www.google.fr/maps/dir/Chamb%C3%A9ry/45.5334845,5.7417367/@45.5308466,5.7361098,15z/data=!4m8!4m7!1m5!1m1!1s0x478ba85708695f63:0xd5c21acfa63d899c!2m2!1d5.917781!2d45.564601!1m0?hl=fr" target="_blank"><b>Gymnase de Rochassieux &agrave; La Bridoire</b></a>.
+			<br>L'hiver il nous arrive de jouer à la<br> <a href="https://www.google.fr/maps/dir/Chamb%C3%A9ry/45.553073,5.7826093/@45.5516486,5.7770732,17z/data=!3m1!4b1!4m9!4m8!1m5!1m1!1s0x478ba85708695f63:0xd5c21acfa63d899c!2m2!1d5.917781!2d45.564601!1m0!3e0" target="_blank"><b>Salle fran&ccedil;ois Cachoud &agrave; St Alban de Montbel</b></a>.<br>Pour voir ou cela se trouve cliquer sur les lien ci-dessus ou voir les plan ci-dessous.</p>
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-6 text-xs-center">
 				<p class="mbr-section-lead lead" align="center"><br>
-					<a href="https://www.google.fr/maps/dir/Chamb%C3%A9ry/45.5334845,5.7417367/@45.5308466,5.7361098,15z/data=!4m8!4m7!1m5!1m1!1s0x478ba85708695f63:0xd5c21acfa63d899c!2m2!1d5.917781!2d45.564601!1m0?hl=fr" target="_blank"><b>Gymnase de Rochassieux à La Bridoire</b></a>
+					<a href="https://www.google.fr/maps/dir/Chamb%C3%A9ry/45.5334845,5.7417367/@45.5308466,5.7361098,15z/data=!4m8!4m7!1m5!1m1!1s0x478ba85708695f63:0xd5c21acfa63d899c!2m2!1d5.917781!2d45.564601!1m0?hl=fr" target="_blank"><b>Gymnase de Rochassieux &agrave; La Bridoire</b></a>
 				</p>
                  <div class="mbr-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:EjA1MjcgUm91dGUgZGUgbGEgQ29tYmUsIDczNTIwIExhIEJyaWRvaXJlLCBGcmFuY2U" allowfullscreen=""></iframe>
 				</div>

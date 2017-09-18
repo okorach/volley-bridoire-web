@@ -17,7 +17,7 @@
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            Assemblée Générale du Club le 20 septembre à 20h30 au <a href="gymnases.php">Gymnase de Rochassieux</a>
+            Assemblée Générale du Club le 20 septembre à 20h30 au <a href="gymnase.php">Gymnase de Rochassieux</a>
             <br>
             Tous les licenciés sont convoqués.
 <!--

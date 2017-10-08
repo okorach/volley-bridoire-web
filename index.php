@@ -1,10 +1,10 @@
-<?php require_once 'inc/header.html';?>
+<?php require_once '/inc/header.html';?>
 
 <body>
 
-<?php include_once 'inc/analytics.html';?>
+<?php include_once '/inc/analytics.html';?>
 
-<?php require_once 'inc/menubar.html';?>
+<?php require_once '/inc/menubar.html';?>
 
 <!------------------------------ INTRO ---------------------------------->
 
@@ -17,7 +17,7 @@
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            Assemblée Générale du Club le 20 septembre à 20h30 au <a href="gymnase.php">Gymnase de Rochassieux</a>
+            Assemblée Générale du Club le 20 septembre à 20h30 au <a href="/gymnase/">Gymnase de Rochassieux</a>
             <br>
             Tous les licenciés sont convoqués.
 <!--
@@ -33,11 +33,11 @@
                <br>Nous sommes engagés dans un championnat (FSGT Savoie) pour un peu de compétition, mais l'important reste la bonne humeur et le plaisir du jeu.<br></p>
 <!--
                     <div class="mbr-section-btn">
-               <a class="btn btn-lg btn-primary" href="contacts.php">Contacts</a>
-               <a class="btn btn-lg btn-primary" href="news.php">News</a>
-               <a class="btn btn-lg btn-primary" href="gymnase.php">Ou jouons nous</a>
-               <a class="btn btn-lg btn-primary" href="photos.php">Album photos</a>
-               <a class="btn btn-lg btn-primary" href="joueur.php">Joueurs</a>
+               <a class="btn btn-lg btn-primary" href="/contacts/">Contacts</a>
+               <a class="btn btn-lg btn-primary" href="/news/">News</a>
+               <a class="btn btn-lg btn-primary" href="/gymnase/">Ou jouons nous</a>
+               <a class="btn btn-lg btn-primary" href="/photos/">Album photos</a>
+               <a class="btn btn-lg btn-primary" href="/joueurs/">Joueurs</a>
                </div>
 -->
             </div>
@@ -96,7 +96,7 @@ foreach ($files as $file) {
 ?>
    </div>
 </div>
-<p align="center"><a href="news.php">Toutes les news</a></p>
+<p align="center"><a href="/news/">Toutes les news</a></p>
 
 <!------------------------------ RESULTATS ---------------------------------->
 <div class="container">
@@ -136,7 +136,7 @@ echo "</div>\n";
     </div>
 </div>
 <br>
-<p align="center"><a href="matchs.php">Tous les r&eacute;sultats</a></p>
+<p align="center"><a href="/matchs/">Tous les r&eacute;sultats</a></p>
 
 </section>
 

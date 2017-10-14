@@ -1,14 +1,14 @@
-<?php require_once '/inc/header.html';?>
+<?php require_once 'header.html';?>
 
 <body>
 
-<?php include_once '/inc/analytics.html';?>
+<?php include_once 'analytics.html';?>
 
-<?php require_once '/inc/menubar.html';?>
+<?php require_once 'menubar.html';?>
 
 <!------------------------------ INTRO ---------------------------------->
 
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(assets/images/home_bg.jpg);">
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(../assets/images/home_bg.jpg);">
 
    <div class="mbr-table-cell">
 
@@ -33,11 +33,11 @@
                <br>Nous sommes engagés dans un championnat (FSGT Savoie) pour un peu de compétition, mais l'important reste la bonne humeur et le plaisir du jeu.<br></p>
 <!--
                     <div class="mbr-section-btn">
-               <a class="btn btn-lg btn-primary" href="/contacts/">Contacts</a>
-               <a class="btn btn-lg btn-primary" href="/news/">News</a>
-               <a class="btn btn-lg btn-primary" href="/gymnase/">Ou jouons nous</a>
-               <a class="btn btn-lg btn-primary" href="/photos/">Album photos</a>
-               <a class="btn btn-lg btn-primary" href="/joueurs/">Joueurs</a>
+               <a class="btn btn-lg btn-primary" href="/contacts/contacts.php">Contacts</a>
+               <a class="btn btn-lg btn-primary" href="/news/news.php">News</a>
+               <a class="btn btn-lg btn-primary" href="/gymnase/gymnase.php">Ou jouons nous</a>
+               <a class="btn btn-lg btn-primary" href="/photos/photos.php">Album photos</a>
+               <a class="btn btn-lg btn-primary" href="/joueurs/joueurs.php">Joueurs</a>
                </div>
 -->
             </div>
@@ -88,7 +88,7 @@ $lastNewsDisplayed = false;
 foreach ($files as $file) {
    if (! $lastNewsDisplayed && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) ) {
       echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-      include_once("news/".$file);
+      ude_once("news/".$file);
       echo "</div> </div>\n";
       $lastNewsDisplayed = true;
    }
@@ -103,7 +103,7 @@ foreach ($files as $file) {
 
 <?php
 
-require_once 'lib/game.php';
+require_once 'matchs/game_object.php';
 $gamelist = array_merge(Game::GetLastPlayedGames(2), Game::GetUnplayedGames(1));
 
 echo "<div class=\"scoretable\">\n";
@@ -170,9 +170,9 @@ echo "</div>\n";
     </div>
 </section>
 
-   <?php include_once 'inc/footer.html';?>
+   <?php include_once 'footer.html';?>
 
-   <?php include_once 'inc/jsscripts.html';?>
+   <?php include_once 'jsscripts.html';?>
    <script src="https://platform.twitter.com/widgets.js"></script>
   
   <input name="animation" type="hidden">

@@ -1,14 +1,14 @@
-<?php require_once '/inc/header.html';?>
+<?php require_once 'header.html';?>
 
 <body>
 
-<?php include_once '/inc/analytics.html';?>
+<?php include_once 'analytics.html';?>
 
-<?php require_once '/inc/menubar.html';?>
+<?php require_once 'menubar.html';?>
 
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow" id="header1-0" style="background-image: url(photos/aiguebelette-2-2000x1336-60.jpg);">
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow" id="header1-0" style="background-image: url(../photos/aiguebelette-2-2000x1336-60.jpg);">
 
-<!--section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-0" style="background-image: url(assets/images/aiguebelette-2-2000x1336-60.jpg);"-->    
+<!--section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-0" style="background-image: url(../assets/images/aiguebelette-2-2000x1336-60.jpg);"-->    
 
     <div class="mbr-table-cell">
         <div class="col-md-10 col-md-offset-1 text-xs-center mbr-section">
@@ -42,9 +42,9 @@
 
 </section>
 
-	<?php include_once '/inc/footer.html';?>
+	<?php include_once 'footer.html';?>
 
-	<?php include_once '/inc/jsscripts.html';?>
+	<?php include_once 'jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

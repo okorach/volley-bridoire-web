@@ -1,10 +1,10 @@
-<?php require_once '/inc/header.html';?>
+<?php require_once 'header.html';?>
 
 <body>
 
-<?php include_once '/inc/analytics.html';?>
+<?php include_once 'analytics.html';?>
 
-<?php require_once '/inc/menubar.html';?>
+<?php require_once 'menubar.html';?>
 
 <?php
 $saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2016';
@@ -12,7 +12,7 @@ $saison = filter_var($saison, FILTER_SANITIZE_STRING);
 $nextyear = $saison+1;
 ?>
 
-<section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-0" style="background-image: url(assets/images/desert.jpg); padding-top: 160px; padding-bottom: 120px;">
+<section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-0" style="background-image: url(../assets/images/desert.jpg); padding-top: 160px; padding-bottom: 120px;">
 
     <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);">
     </div>
@@ -102,9 +102,9 @@ foreach ($files as $file)
 
 </section>
 
-   <?php include_once '/inc/footer.html';?>
+   <?php include_once 'footer.html';?>
 
-   <?php include_once '/inc/jsscripts.html';?>
+   <?php include_once 'jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

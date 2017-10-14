@@ -1,14 +1,14 @@
-<?php require_once 'inc/header.html';?>
+<?php require_once 'header.html';?>
 
 <body>
 
-<?php include_once 'inc/analytics.html';?>
+<?php include_once 'analytics.html';?>
 
-<?php require_once 'inc/menubar.html';?>
+<?php require_once 'menubar.html';?>
 
 <!------------------------------ INTRO ---------------------------------->
 
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(assets/images/home_bg.jpg);">
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(../assets/images/home_bg.jpg);">
 
     <div class="mbr-table-cell">
 
@@ -85,7 +85,7 @@ foreach ($files as $file)
 	if ($lastNewsDisplayed == false && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) )
 	{
 		echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-		include_once("news/".$file);
+		ude_once("news/".$file);
 		echo "</div> </div>\n";
 		$lastNewsDisplayed = true;
 	}
@@ -178,9 +178,9 @@ echo "</div>\n";
     </div>
 </section>
 
-	<?php include_once 'inc/footer.html';?>
+	<?php include_once 'footer.html';?>
 
-	<?php include_once 'inc/jsscripts.html';?>
+	<?php include_once 'jsscripts.html';?>
    <script src="https://platform.twitter.com/widgets.js"></script>
   
   <input name="animation" type="hidden">

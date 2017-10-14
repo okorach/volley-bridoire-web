@@ -1,10 +1,10 @@
-<?php require_once 'inc/header.html';?>
+<?php require_once 'header.html';?>
 
 <body>
 
-<?php include_once 'inc/analytics.html';?>
+<?php include_once 'analytics.html';?>
 
-<?php require_once 'inc/menubar.html';?>
+<?php require_once 'menubar.html';?>
 
 <section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="twitter-feed-block-1" style="background-color: rgb(255, 255, 255);">
             
@@ -26,9 +26,9 @@
         </div>
 </section>
 
-	<?php include_once 'inc/footer.html';?>
+	<?php include_once 'footer.html';?>
 
-	<?php include_once 'inc/jsscripts.html';?>
+	<?php include_once 'jsscripts.html';?>
    <script src="https://platform.twitter.com/widgets.js"></script>
   
   <input name="animation" type="hidden">

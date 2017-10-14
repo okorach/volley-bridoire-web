@@ -1,13 +1,13 @@
-<?php require_once '/inc/header.html';?>
+<?php require_once 'header.html';?>
 
 <body>
 
-<?php include_once '/inc/analytics.html';?>
+<?php include_once 'analytics.html';?>
 
-<?php require_once '/inc/menubar.html';?>
+<?php require_once 'menubar.html';?>
 
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-after-navbar"
-   id="header1-0" style="background-image: url(photos/perso/vcb-2014-2.jpg);">
+   id="header1-0" style="background-image: url(../photos/perso/vcb-2014-2.jpg);">
 
     <div class="mbr-table-cell">
 
@@ -31,9 +31,9 @@ Nous rencontrer: Quand nous n'avons de match &agrave; l'ext&eacute;rieur nous no
 
 </section>
 
-   <?php include_once '/inc/footer.html';?>
+   <?php include_once 'footer.html';?>
 
-   <?php include_once '/inc/jsscripts.html';?>
+   <?php include_once 'jsscripts.html';?>
 
   <input name="animation" type="hidden">
   </body>

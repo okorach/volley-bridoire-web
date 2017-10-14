@@ -108,6 +108,9 @@ class News
       return $list;
    }
 
+   //------------------------------------------------------------------------------
+   //  Search()
+   //------------------------------------------------------------------------------
       private static function search($startdate = "", $enddate = "", $orderby = "DESC", $author = "", $limit = -1)
       {
          DbManager::opendb();
@@ -119,14 +122,14 @@ class News
              $cond = true;
           }
           if ($enddate != "") {
-             $query .= ($cond ? " AND" : " WHERE")
+             $query .= ($cond ? " AND" : " WHERE");
              $query .= " date_news <= '".$enddate."'";
           }
           if ($author != "") {
-             $query .= ($cond ? " AND" : " WHERE")
+             $query .= ($cond ? " AND" : " WHERE");
              $query .= " author == '".$author."'";
           }
-          $order = toupper($order);
+          $order = strtoupper($order);
           if ($order == "DESC" || $order == "ASC") {
              $query .= " ORDER BY date_news $order";
           }
@@ -152,12 +155,6 @@ class News
    //------------------------------------------------------------------------------
 
 
-   //------------------------------------------------------------------------------
-   //  Search()
-   //------------------------------------------------------------------------------
-   public static function Search()
-   {
-   }
 
    //------------------------------------------------------------------------------
    //  ReadFromDB()
@@ -200,7 +197,7 @@ class News
    {
       $years = preg_split('/\s*[- \/]\s*/', "$season", 2);
       $y1 = $years[0];
-      if (preg_match('/^\d\d\d\d$/', "$y1")
+      if (preg_match('/^\d\d\d\d$/', "$y1"))
       {
          $y2 = $y1 + 1;
          return News::search("$y1-08-16", "$y2-08-15");
@@ -210,4 +207,5 @@ class News
          return [];
       }
    }
+}
 ?>

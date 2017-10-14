@@ -19,7 +19,10 @@
 //
 //------------------------------------------------------------------------------
 
-require_once('data.txt');
+# require_once('data.php');
+const DB_SERVER = 'sql.free.fr';
+const DB_NAME   = 'volley.bridoire';
+const DB_PASSWD = 'lhassa73';
 
 //==============================================================================
 //
@@ -41,6 +44,7 @@ class DbManager
 //------------------------------------------------------------------------------
 public static function opendb()
 {
+
    if (! mysql_connect(DB_SERVER, DB_NAME, DB_PASSWD))
    {
       throw new DbException('Unable to connect to database: '.mysql_error());

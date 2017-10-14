@@ -88,7 +88,7 @@ $lastNewsDisplayed = false;
 foreach ($files as $file) {
    if (! $lastNewsDisplayed && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) ) {
       echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-      ude_once("news/".$file);
+      include_once("news/".$file);
       echo "</div> </div>\n";
       $lastNewsDisplayed = true;
    }

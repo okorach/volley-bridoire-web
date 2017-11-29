@@ -19,7 +19,7 @@
                     <p class="mbr-section-lead lead">
 Vous pouvez nous contacter:<br>
 Par email: <strong>volley.bridoire@free.fr</strong><br>
-Par t&eacute;l&eacute;phone: <strong>06 89 55 50 81 (Mobile)</strong><br>
+Par t&eacute;l&eacute;phone: <strong>06 89 55 50 81</strong><br>
 <br><br>
 Nous rencontrer: Quand nous n'avons de match &agrave; l'ext&eacute;rieur nous nous entra&icirc;nons le
 <strong>mardi soir &agrave; 20h30</strong> au <a href="gymnase.php"><b>Gymnase de Rochassieux &agrave; La Bridoire</b></a>.

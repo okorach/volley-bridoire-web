@@ -5,7 +5,7 @@
 <?php include_once 'analytics.html';?>
 
 <?php require_once 'menubar.html';?>
-<!-- COMMENTING FOR TEST -->
+<!-- COMMENTING FOR TEST v2.9.1 -->
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-after-navbar"
    id="header1-0" style="background-image: url(../photos/perso/vcb-2014-2.jpg);">
 

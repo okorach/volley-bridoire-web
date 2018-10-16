@@ -78,6 +78,7 @@
    <div class="mbr-section__container mbr-section__container--isolated">
 <?php
 
+      // FIXME: Blah blah blah
 $dh  = opendir('news');
 while (false !== ($filename = readdir($dh))) {
     $files[] = $filename;

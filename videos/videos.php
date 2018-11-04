@@ -1,10 +1,10 @@
-<?php require_once 'header.html';?>
+<?php require_once '/include/header.html';?>
 
 <body>
 
-<?php include_once 'analytics.html';?>
+<?php include_once '/include/analytics.html';?>
 
-<?php require_once 'menubar.html';?>
+<?php require_once '/include/menubar.html';?>
 
 <?php
 $id = ($id = filter_input(INPUT_GET, 'id')) ? $id : '1';
@@ -61,9 +61,9 @@ echo '              <div class="mbr-figure"><iframe class="mbr-embedded-video" s
 
 </section>
 
-<?php include_once 'footer.html';?>
+<?php include_once '/include/footer.html';?>
 
-<?php include_once 'jsscripts.html';?>
+<?php include_once '/include/jsscripts.html';?>
   
 <input name="animation" type="hidden">
 </body>

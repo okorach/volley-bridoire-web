@@ -83,6 +83,22 @@ class Game {
    //------------------------------------------------------------------------------
    //  Static public functions
    //------------------------------------------------------------------------------
+   private static function getGame($result, $i) {
+      $dom = mysql_result($result,$i,'equipe_domicile');
+      $vis = mysql_result($result,$i,'equipe_visiteur');
+      if ($dom == "VCB") {
+            $dom = "La Bridoire";
+      }
+      if ($vis == "VCB") {
+            $vis = "La Bridoire";
+      }
+      return new Game(
+            mysql_result($result,$i,'date_match'),
+            $dom,
+            $vis,
+            mysql_result($result,$i,'score1'),
+            mysql_result($result,$i,'score2'));
+   }
    //------------------------------------------------------------------------------
    //  ReadFromDB()
    //------------------------------------------------------------------------------
@@ -91,12 +107,7 @@ class Game {
       $result = mysql_query('select * from matchs order by date_match');
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++) {
-         $list[] = new Game(
-            mysql_result($result,$i,'date_match'),
-            mysql_result($result,$i,'equipe_domicile'),
-            mysql_result($result,$i,'equipe_visiteur'),
-            mysql_result($result,$i,'score1'),
-            mysql_result($result,$i,'score2'));
+         $list[] = getGame($result, $i);
       }
       DbManager::closedb();
       return $list;
@@ -113,11 +124,7 @@ class Game {
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++) {
-         $list[] = new Game(
-            mysql_result($result,$i,'date_match'),
-            mysql_result($result,$i,'equipe_domicile'),
-            mysql_result($result,$i,'equipe_visiteur'),
-            '', '');
+         $list[] = getGame($result, $i);
       }
       DbManager::closedb();
       return $list;
@@ -135,12 +142,7 @@ class Game {
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = $n-1; $i >= 0; $i--) {
-         $list[] = new Game(
-            mysql_result($result,$i,'date_match'),
-            mysql_result($result,$i,'equipe_domicile'),
-            mysql_result($result,$i,'equipe_visiteur'),
-            mysql_result($result,$i,'score1'),
-            mysql_result($result,$i,'score2'));
+         $list[] = getGame($result, $i);
       }
       DbManager::closedb();
       return $list;
@@ -158,12 +160,7 @@ class Game {
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = $n-1; $i >= 0; $i--) {
-         $list[] = new Game(
-            mysql_result($result,$i,'date_match'),
-            mysql_result($result,$i,'equipe_domicile'),
-            mysql_result($result,$i,'equipe_visiteur'),
-            mysql_result($result,$i,'score1'),
-            mysql_result($result,$i,'score2'));
+         $list[] = getGame($result, $i);
       }
       DbManager::closedb();
       return $list;

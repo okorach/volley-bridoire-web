@@ -17,13 +17,9 @@
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            Assemblée Générale du Club le 20 septembre à 20h30 au <a href="/gymnase/">Gymnase de Rochassieux</a>
-            <br>
-            Tous les licenciés sont convoqués.
-<!--
-               01 octobre 2016: Après 10 ans de bons et loyaux services de l'ancien site,<br>
-               ouverture en grande pompe du nouveau site du...
--->
+            Sauvés in-extremis de la relégation en poule C, l'équipe réalise finalement un
+            début de saison en fanfare avec 2 victoires 3/0 pour les 2 premiers matchs.<br>
+            Prochain match le 5 novembre contre Aix 3.
             </p>
                     <h2 class="mbr-section-title display-1">Volleyball La Bridoire</h2>
                     <p class="mbr-section-lead lead">

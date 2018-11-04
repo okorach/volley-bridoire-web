@@ -79,9 +79,8 @@ class Game {
          return ($home > $away ? $this->homeTeam : $this->awayTeam);
       }
    }
-
    //------------------------------------------------------------------------------
-   //  Static public functions
+   //  Static private functions
    //------------------------------------------------------------------------------
    private static function getGame($result, $i) {
       $dom = mysql_result($result,$i,'equipe_domicile');
@@ -100,6 +99,9 @@ class Game {
             mysql_result($result,$i,'score2'));
    }
    //------------------------------------------------------------------------------
+   //  Static public functions
+   //------------------------------------------------------------------------------
+   //------------------------------------------------------------------------------
    //  ReadFromDB()
    //------------------------------------------------------------------------------
    public static function ReadFromDB() {
@@ -107,7 +109,7 @@ class Game {
       $result = mysql_query('select * from matchs order by date_match');
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++) {
-         $list[] = getGame($result, $i);
+         $list[] = Game::getGame($result, $i);
       }
       DbManager::closedb();
       return $list;
@@ -124,7 +126,7 @@ class Game {
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = 0; $i < $n; $i++) {
-         $list[] = getGame($result, $i);
+         $list[] = Game::getGame($result, $i);
       }
       DbManager::closedb();
       return $list;
@@ -142,7 +144,7 @@ class Game {
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = $n-1; $i >= 0; $i--) {
-         $list[] = getGame($result, $i);
+         $list[] = Game::getGame($result, $i);
       }
       DbManager::closedb();
       return $list;
@@ -160,7 +162,7 @@ class Game {
       $result = mysql_query($query);
       $n = mysql_numrows($result);
       for ($i = $n-1; $i >= 0; $i--) {
-         $list[] = getGame($result, $i);
+         $list[] = Game::getGame($result, $i);
       }
       DbManager::closedb();
       return $list;

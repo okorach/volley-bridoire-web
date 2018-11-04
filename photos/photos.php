@@ -16,7 +16,7 @@
 
 $fh = fopen("photos.csv", "r");
 while (false !== ($line = fgets($fh))) {
-	$data = preg_split('/\s*,\s*/', $line, 3);
+   $data = preg_split('/\s*,\s*/', $line, 3);
    $photos[] = $data[0];
    $titles[] = $data[1];
    $descriptions[] = $data[2];
@@ -38,7 +38,7 @@ for ($i = 0; $i < count($photos); $i++)
 {
    echo '<div class="mbr-section mbr-section-hero carousel-item dark center mbr-section-full';
    if ($i == 0) { echo ' active'; }
-   echo '" data-bg-video-slide="false" style="background-image: url(photos/perso/'.$photos[$i].');">'."\n";
+   echo '" data-bg-video-slide="false" style="background-image: url(perso/'.$photos[$i].');">'."\n";
    echo '   <div class="mbr-table-cell">'."\n";
    echo '      <div class="mbr-overlay"></div>'."\n";
    echo '      <div class="container-slide container">'."\n";

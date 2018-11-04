@@ -145,6 +145,29 @@ class Game {
       DbManager::closedb();
       return $list;
    }
+   //------------------------------------------------------------------------------
+   //  GetSeasonGames()
+   //------------------------------------------------------------------------------
+   public static function GetSeasonGames($season)
+   {
+      DbManager::opendb();
+      $start = "$season-09-01";
+      $season++;
+      $end = "$season-07-01";
+      $query = "select * from matchs where date_match >= '$start' and date_match < '$end' order by date_match desc";
+      $result = mysql_query($query);
+      $n = mysql_numrows($result);
+      for ($i = $n-1; $i >= 0; $i--) {
+         $list[] = new Game(
+            mysql_result($result,$i,'date_match'),
+            mysql_result($result,$i,'equipe_domicile'),
+            mysql_result($result,$i,'equipe_visiteur'),
+            mysql_result($result,$i,'score1'),
+            mysql_result($result,$i,'score2'));
+      }
+      DbManager::closedb();
+      return $list;
+   }
 }
 
 ?>

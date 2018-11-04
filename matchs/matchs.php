@@ -8,7 +8,7 @@ require_once 'menubar.html';
 ?>
 
 <?php
-$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2016';
+$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2018';
 $saison = filter_var($saison, FILTER_SANITIZE_STRING);
 $nextyear = $saison+1;
 ?>
@@ -44,7 +44,7 @@ div.transbox {
 <?php
 
 require_once 'game_object.php';
-$gamelist = Game::ReadFromDB();
+$gamelist = Game::GetSeasonGames($saison);
 
 echo "<div class=\"scoretable transbox\">\n";
 foreach ($gamelist as $game)

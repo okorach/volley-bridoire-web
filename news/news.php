@@ -9,7 +9,7 @@
 <?php
 require_once 'news_object.php';
 
-$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2016';
+$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2018';
 $saison = filter_var($saison, FILTER_SANITIZE_STRING);
 $nextyear = $saison+1;
 ?>
@@ -34,7 +34,7 @@ $nextyear = $saison+1;
 <?php
 
 
-$newslist = News::GetYearNews();
+$newslist = News::GetYearNews($saison);
 foreach ($newslist as $news)
 {
    echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead">';
@@ -53,7 +53,10 @@ foreach ($newslist as $news)
     <div class="container">
         <div class="row">
             <div class="col-xs-12 lead"><p>
-  <a href="news.php?saison=2015">Saison 2015/2016</a>
+  <a href="news.php?saison=2018">Saison 2018/2019</a>
+| <a href="news.php?saison=2017">Saison 2017/2018</a>
+| <a href="news.php?saison=2016">Saison 2016/2017</a>
+| <a href="news.php?saison=2015">Saison 2015/2016</a>
 | <a href="news.php?saison=2014">Saison 2014/2015</a>
 | <a href="news.php?saison=2013">Saison 2013/2014</a>
 | <a href="news.php?saison=2012">Saison 2012/2013</a>

@@ -8,7 +8,7 @@
 
 <!------------------------------ INTRO ---------------------------------->
 
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(../assets/images/home_bg.jpg);">
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(assets/images/home_bg_2018.jpg);">
 
    <div class="mbr-table-cell">
 
@@ -17,7 +17,7 @@
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            Prochain match le 13 novembre 20h30 à domicile, <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.
+            Prochain match le 13 novembre 20h30 à domicile,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.
             </p>
                     <h2 class="mbr-section-title display-1">Volleyball La Bridoire</h2>
                     <p class="mbr-section-lead lead">
@@ -71,21 +71,17 @@
 <div class="container">
    <div class="mbr-section__container mbr-section__container--isolated">
 <?php
+require_once 'news/news_object.php';
 
-$dh  = opendir('news');
-while (false !== ($filename = readdir($dh))) {
-    $files[] = $filename;
-}
-closedir($dh);
-rsort($files);
-$lastNewsDisplayed = false;
-foreach ($files as $file) {
-   if (! $lastNewsDisplayed && preg_match('/^news_(\d\d\d\d)-(\d\d)-\d\d\.html$/', $file, $matches) ) {
-      echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead"><p>';
-      include_once("news/".$file);
-      echo "</div> </div>\n";
-      $lastNewsDisplayed = true;
-   }
+$newslist = News::GetYearNews(2018);
+foreach ($newslist as $news)
+{
+   echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead">';
+   #include_once("news/".$file);
+   echo "<p><strong>Par ".$news->getAuthor().", le ".$news->getDate("%d/%m/%Y")."</strong></p>\n";
+   echo "<p>\n".$news->getContents()."</p>\n";
+
+   echo "</div> </div> </div> <p></p>\n";
 }
 ?>
    </div>

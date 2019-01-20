@@ -6,6 +6,18 @@
 
 <?php require_once 'menubar.html';?>
 
+<?php
+require_once 'matchs/game_object.php';
+$nextGame = Game::GetUnplayedGames(1));
+$messageNextGame += "Prochain match le " + $nextGame->getDate('%d/%m')
+$homeTeam = $nextGame->getHomeTeam()
+if ($homeTeam != 'VCB' && $homeTeam != 'La Bridoire') {
+   $messageNextGame += " à l'extérieur à " + $homeTeam + "."
+} else {
+   $messageNextGame += ' à domicile à 20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>".'
+}
+?>
+
 <!------------------------------ INTRO ---------------------------------->
 
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-1" style="background-image: url(assets/images/home_bg_2018.jpg);">
@@ -17,7 +29,8 @@
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            Prochain match le 13 novembre 20h30 à domicile,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.
+            <?php echo $messageNextGame ?>
+            Cela mettra un terme aux matchs aller, en cas de victoire, l'équipe va probablement monter en poule A.
             </p>
                     <h2 class="mbr-section-title display-1">Volleyball La Bridoire</h2>
                     <p class="mbr-section-lead lead">

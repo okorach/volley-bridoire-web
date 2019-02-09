@@ -10,7 +10,7 @@
 require_once 'matchs/game_object.php';
 $nextGame = Game::GetUnplayedGames(1);
 if ($nextGame == null) {
-   $messageNextGame = "Pas de prochain match pour le mmoment "
+   $messageNextGame = "Pas de prochain match pour le mmoment";
 } else {
    $messageNextGame = "Prochain match le " . $nextGame[0]->getDate('%d/%m');
    $homeTeam = $nextGame[0]->getHomeTeam();

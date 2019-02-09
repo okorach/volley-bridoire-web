@@ -34,6 +34,7 @@ if ($nextGame == null) {
 
             <p class="mbr-section-lead lead">
             <br>L'équipe monte en poule A, comme prévu. La 2ème moitié de saison va être difficile avec beaucoup d'équipes très fortes à affronter
+            <br>
             <?php echo $messageNextGame ?>
             </p>
                     <h2 class="mbr-section-title display-1">Volleyball La Bridoire</h2>

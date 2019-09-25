@@ -33,7 +33,8 @@ if ($nextGame == null) {
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            <br>L'équipe monte en poule A, comme prévu. La 2ème moitié de saison va être difficile avec beaucoup d'équipes très fortes à affronter
+            <br>En janvier on disait: <small>L'équipe monte en poule A, comme prévu. La 2ème moitié de saison va être difficile avec beaucoup d'équipes très fortes à affronter</small>
+            <br>En Septembre: L'équipe se maintient en Poula A sur un sacré concours de circonstances: Encore 1/2 saison ou on va se faire laminer :-)
             <br>
             <?php echo $messageNextGame ?>
             </p>
@@ -64,7 +65,7 @@ if ($nextGame == null) {
 <!--section class="mbr-section article mbr-section__container" id="content1-0" style="background-color: rgb(204, 204, 204); padding-top: 20px; padding-bottom: 20px;"-->
 
 <section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="twitter-feed-block-1" style="background-color: rgb(255, 255, 255);">
-            
+
 <div class="row">
 
 <!------------------------------ LEFT COLUMN ------------------------------>
@@ -76,7 +77,7 @@ if ($nextGame == null) {
    <div class="mbr-section__container mbr-section__container--isolated">
       <div class="twitterFeed text-center"><a name="twitter"><a class="twitter-timeline" href="https://twitter.com/volleybridoire" data-widget-id="670227744614187012" data-screen-name="volleybridoire" data-theme="light" width="520" height="600">Tweets by @VolleyBridoire</a>
       </div>
-   </div>   
+   </div>
 </div>
 
 </div>
@@ -119,7 +120,7 @@ echo "<div class=\"scoretable\">\n";
 foreach ($gamelist as $game) {
    $w = $game->winner();
    if ($w == '') {
-      $res = 'unknown'; 
+      $res = 'unknown';
    } elseif ($w == 'VCB' || $w == 'La Bridoire') {
       $res = 'win';
    } else {
@@ -127,8 +128,8 @@ foreach ($gamelist as $game) {
          $res = 'tiebreak';
       } else {
          $res = 'loss';
-      }   
-   }   
+      }
+   }
    echo "<div class=\"gamerow\">\n";
    echo "   <div class=\"scoretablecell gamedate\">".$game->getDate('%d/%m/%y')."</div>\n";
    echo "   <div class=\"scoretablecell team vcb-team\">".$game->getHomeTeam()."</div>\n";
@@ -151,7 +152,7 @@ echo "</div>\n";
 <!------------------------------ SHARE ---------------------------------->
 
 <section class="mbr-section mbr-section-md-padding mbr-after-navbar" id="page3-social-buttons1-0" style="background-color: rgb(255, 255, 255); padding-top: 90px; padding-bottom: 90px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
@@ -168,8 +169,8 @@ echo "</div>\n";
                     <span class="btn btn-social plusone" title="Share link on Google+">
                         <i class="socicon socicon-google"></i>
                     </span>
-                    
-                    
+
+
                   </div>
 
                 </div>
@@ -182,7 +183,7 @@ echo "</div>\n";
 
    <?php include_once 'jsscripts.html';?>
    <script src="https://platform.twitter.com/widgets.js"></script>
-  
+
   <input name="animation" type="hidden">
   </body>
 </html>

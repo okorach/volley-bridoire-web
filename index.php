@@ -33,8 +33,8 @@ if ($nextGame == null) {
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            <br>En janvier on disait: <small>L'équipe monte en poule A, comme prévu. La 2ème moitié de saison va être difficile avec beaucoup d'équipes très fortes à affronter</small>
-            <br>En Septembre: L'équipe se maintient en Poula A sur un sacré concours de circonstances: Encore 1/2 saison ou on va se faire laminer :-)
+            <br>En janvier on disait: <small>L'équipe monte en poule A, comme prévu. La 2ème moitié de saison va être difficile avec beaucoup d'&eacute;quipes très fortes &agrave; affronter</small>
+            <br>En Septembre: L'équipe se maintient en Poule A sur un sacr&eacute; concours de circonstances: Encore 1/2 saison ou on va se faire laminer :-)
             <br>
             <?php echo $messageNextGame ?>
             </p>

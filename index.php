@@ -33,8 +33,7 @@ if ($nextGame == null) {
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            <br>En janvier on disait: <small>L'équipe monte en poule A, comme prévu. La 2ème moitié de saison va être difficile avec beaucoup d'&eacute;quipes très fortes &agrave; affronter</small>
-            <br>En Septembre: L'équipe se maintient en Poule A sur un sacr&eacute; concours de circonstances: Encore 1/2 saison ou on va se faire laminer :-)
+            <br>Bienvenue sur notre site. La saison 2019/2020 ne fait que commencer. Contactez nous !
             <br>
             <?php echo $messageNextGame ?>
             </p>
@@ -42,7 +41,7 @@ if ($nextGame == null) {
                     <p class="mbr-section-lead lead">
                Vous aimez le <strong>volleyball</strong> et vous cherchez un club dans l'avant-pays savoyard ?<br>
                Bienvenue au club de La Bridoire.
-               <br>Nous sommes un petit groupe d'une douzaine de joueurs en manque de volley dans la région et nous avons créé ce club il y a presque 10 ans.
+               <br>Nous sommes un petit groupe d'une douzaine de joueurs en manque de volley dans la région et nous avons créé ce club il y a 10 ans maintenant.
                <br>Nous sommes engagés dans un championnat (FSGT Savoie) pour un peu de compétition, mais l'important reste la bonne humeur et le plaisir du jeu.<br></p>
 <!--
                     <div class="mbr-section-btn">

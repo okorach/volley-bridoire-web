@@ -19,10 +19,7 @@
 //
 //------------------------------------------------------------------------------
 
-# require_once('data.php');
-const DB_SERVER = 'sql.free.fr';
-const DB_NAME   = 'volley.bridoire';
-const DB_PASSWD = 'lhassa73';
+require_once('data.php');
 
 //==============================================================================
 //
@@ -67,3 +64,5 @@ public static function closedb()
 }
 
 }
+
+?>

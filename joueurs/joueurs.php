@@ -46,13 +46,13 @@ if (! file_exists($player_pic) ) {
 
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-0" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
         <p class="text-xs-center"><a href="/index.php">Home</a> |
 
 		<?php include 'joueurs_liste.html';?>
-	
-		<br>Copyright (c) 2016-2017 Volley La Bridoire.</p>
+    <p>
+    <?php include_once 'footer.html';?>
     </div>
 </footer>
 

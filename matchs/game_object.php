@@ -108,6 +108,7 @@ class Game {
       DbManager::opendb();
       $result = mysql_query('select * from matchs order by date_match');
       $n = mysql_numrows($result);
+      $list = array();
       for ($i = 0; $i < $n; $i++) {
          $list[] = Game::getGame($result, $i);
       }
@@ -125,6 +126,7 @@ class Game {
       }
       $result = mysql_query($query);
       $n = mysql_numrows($result);
+      $list = array();
       for ($i = 0; $i < $n; $i++) {
          $list[] = Game::getGame($result, $i);
       }
@@ -143,6 +145,7 @@ class Game {
       }
       $result = mysql_query($query);
       $n = mysql_numrows($result);
+      $list = array();
       for ($i = $n-1; $i >= 0; $i--) {
          $list[] = Game::getGame($result, $i);
       }
@@ -161,6 +164,7 @@ class Game {
       $query = "select * from matchs where date_match >= '$start' and date_match < '$end' order by date_match desc";
       $result = mysql_query($query);
       $n = mysql_numrows($result);
+      $list = array();
       for ($i = $n-1; $i >= 0; $i--) {
          $list[] = Game::getGame($result, $i);
       }

@@ -20,6 +20,7 @@ if ($nextGame == null) {
       $messageNextGame .= ' à domicile à 20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.';
    }
 }
+$messageNextGame = "Le championnat est d&eacute;finitivement interrompu pour cette ann&eacute;e. #restezchezvous."
 ?>
 
 <!------------------------------ INTRO ---------------------------------->
@@ -33,7 +34,8 @@ if ($nextGame == null) {
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            <br>Bienvenue sur notre site. La saison 2019/2020 ne fait que commencer. Contactez nous !
+            <br>Bienvenue sur notre site.
+            <br>Rendez-vous &agrave; la mi-ao&ucirc;t pour en savoir plus pour le déroulement du championnat 2020-2021 !
             <br>
             <?php echo $messageNextGame ?>
             </p>
@@ -91,7 +93,7 @@ if ($nextGame == null) {
 <?php
 require_once 'news/news_object.php';
 
-$newslist = News::GetYearNews(2018);
+$newslist = News::GetYearNews(2020);
 foreach ($newslist as $news)
 {
    echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead">';

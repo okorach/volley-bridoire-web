@@ -93,7 +93,7 @@ $messageNextGame = "Le championnat est d&eacute;finitivement interrompu pour cet
 <?php
 require_once 'news/news_object.php';
 
-$newslist = News::GetYearNews(2018);
+$newslist = News::GetYearNews(2020);
 foreach ($newslist as $news)
 {
    echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead">';

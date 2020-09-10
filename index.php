@@ -34,8 +34,8 @@ $messageNextGame = "Le championnat est d&eacute;finitivement interrompu pour cet
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            <br>Bienvenue sur notre site.
-            <br>Rendez-vous &agrave; la mi-ao&ucirc;t pour en savoir plus pour le déroulement du championnat 2020-2021 !
+            <br>Bienvenue sur le site du Volley Club La Bridoire.
+            <br><b>Reprise des entrainements le Mardi 15 Septembre</b>, 20h30 au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>
             <br>
             <?php echo $messageNextGame ?>
             </p>

@@ -20,7 +20,7 @@ if ($nextGame == null) {
       $messageNextGame .= ' à domicile à 20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.';
    }
 }
-$messageNextGame = "Le championnat est d&eacute;finitivement interrompu pour cette ann&eacute;e. #restezchezvous."
+$messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de la mi-octobre.<br>En attendant entrainement tous les mardis soir à 20h30."
 ?>
 
 <!------------------------------ INTRO ---------------------------------->

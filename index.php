@@ -35,7 +35,7 @@ $messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de 
 
             <p class="mbr-section-lead lead">
             <br>Bienvenue sur le site du Volley Club La Bridoire.
-            <br><b>Reprise des entrainements le Mardi 15 Septembre</b>, 20h30 au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>
+            <br><b>Premier match de la saison mardi 6 oct à Pont de Beauvoisin, 20h30 au gymnase du Lycée Pravaz</b>
             <br>
             <?php echo $messageNextGame ?>
             </p>

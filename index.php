@@ -20,7 +20,7 @@ if ($nextGame == null) {
       $messageNextGame .= ' à domicile à 20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.';
    }
 }
-$messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de la mi-octobre.<br>En attendant entrainement tous les mardis soir à 20h30."
+// $messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de la mi-octobre.<br>En attendant entrainement tous les mardis soir à 20h30."
 ?>
 
 <!------------------------------ INTRO ---------------------------------->
@@ -35,7 +35,7 @@ $messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de 
 
             <p class="mbr-section-lead lead">
             <br>Bienvenue sur le site du Volley Club La Bridoire.
-            <br><b>Premier match de la saison mardi 6 oct à Pont de Beauvoisin, 20h30 au gymnase du Lycée Pravaz</b>
+            <br><b>Le <a href="matchs/matchs.php">calendrier des matchs est publié.</a><br>1er match mardi 6 oct à Pont de Beauvoisin, 20h30 au gymnase du Lycée Pravaz</b>
             <br>
             <?php echo $messageNextGame ?>
             </p>

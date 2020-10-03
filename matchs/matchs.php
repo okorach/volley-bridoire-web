@@ -8,7 +8,7 @@ require_once 'menubar.html';
 ?>
 
 <?php
-$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2019';
+$saison = ($saison = filter_input(INPUT_GET, 'saison')) ? $saison : '2020';
 $saison = filter_var($saison, FILTER_SANITIZE_STRING);
 $nextyear = $saison+1;
 ?>

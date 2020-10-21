@@ -39,7 +39,7 @@ if ($nextGame == null) {
             <br>
             <?php echo $messageNextGame ?>
             </p>
-                    <h2 class="mbr-section-title display-1">Volleyball La Bridoire</h2>
+                    <div class="mbr-section-title display-1">Volleyball La Bridoire</div>
                     <p class="mbr-section-lead lead">
                Vous aimez le <strong>volleyball</strong> et vous cherchez un club dans l'avant-pays savoyard ?<br>
                Bienvenue au club de La Bridoire.

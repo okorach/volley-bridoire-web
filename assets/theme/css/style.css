@@ -499,39 +499,72 @@ p.oko-lead,
     background: #f4f4f4;
     padding: 10px 0 10px 24px; }
 
-.display-1 {
-  font-size: 4.39rem;
-  font-weight: 600;
-  letter-spacing: -2px;
-  margin-bottom: 0.2843em;
-  margin-top: 3.9rem; }
+@media screen and (max-width : 960px)
+{
+  .display-1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-top: 2rem;
+    margin-bottom: 0.2843em;
+  }
+    
+  .display-2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+  }
 
+  .display-3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .display-4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width : 961px)
+{
+  .display-1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-top: 3rem;
+    margin-bottom: 0.2843em;
+   }
   
-.oko-display-1 {
-  font-size: 2.39rem;
-  font-weight: normal;
-  letter-spacing: -2px;
-  margin-bottom: 0.2843em;
-  margin-top: 1.9rem; }
+  .display-2 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 2rem
+   }
+  
+  .display-4 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+   }
+}
 
-.display-2 {
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: -1px;
-  margin-bottom: 1.5625rem;
-  margin-top: 3.5rem; }
-
-.display-3 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-top: 3.2rem;
-  margin-bottom: 2rem; }
-
-.display-4 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-top: 2.3rem;
-  margin-bottom: 1.8rem; }
 
 .modal-backdrop {
   background: -webkit-linear-gradient(left, #564740, #3a414a);

@@ -31,7 +31,7 @@ div.transbox {
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
 <?php
-               echo "<h3 class=\"mbr-section-title display-2\">Résultats Saison $saison/$nextyear</h3>";
+               echo "<h3 class=\"mbr-section-title display-4\">Résultats Saison $saison/$nextyear</h3>";
 ?>           
             </div>
         </div>

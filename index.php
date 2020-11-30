@@ -9,6 +9,7 @@
 <?php
 require_once 'matchs/game_object.php';
 $nextGame = Game::GetUnplayedGames(1);
+/*
 if ($nextGame == null) {
    $messageNextGame = "Pas de prochain match pour le mmoment";
 } else {
@@ -20,7 +21,10 @@ if ($nextGame == null) {
       $messageNextGame .= ' à domicile à 20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.';
    }
 }
-// $messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de la mi-octobre.<br>En attendant entrainement tous les mardis soir à 20h30."
+*/
+// FIXME - This should be automatic
+$messageNextGame = "Le championnat 2020/2021 (et les entrainements) sontt interrompus en raison de la 2ème vague de COVID-19.
+<br>Prochaines nouvelles aux alentours du 15 janvier 2021."
 ?>
 
 <!------------------------------ INTRO ---------------------------------->

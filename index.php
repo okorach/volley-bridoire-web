@@ -20,6 +20,7 @@ if ($nextGame == null) {
       $messageNextGame .= ' à domicile à 20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.';
    }
 }
+// $messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de la mi-octobre.<br>En attendant entrainement tous les mardis soir à 20h30."
 ?>
 
 <!------------------------------ INTRO ---------------------------------->
@@ -33,11 +34,12 @@ if ($nextGame == null) {
             <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
             <p class="mbr-section-lead lead">
-            <br>Bienvenue sur notre site. La saison 2019/2020 ne fait que commencer. Contactez nous !
+            <br>Bienvenue sur le site du Volley Club La Bridoire.
+            <br><b>Le <a href="matchs/matchs.php">calendrier des matchs est publié.</a><br>1er match mardi 6 oct à Pont de Beauvoisin, 20h30 au gymnase du Lycée Pravaz</b>
             <br>
             <?php echo $messageNextGame ?>
             </p>
-                    <h2 class="mbr-section-title display-1">Volleyball La Bridoire</h2>
+                    <div class="mbr-section-title display-1">Volleyball La Bridoire</div>
                     <p class="mbr-section-lead lead">
                Vous aimez le <strong>volleyball</strong> et vous cherchez un club dans l'avant-pays savoyard ?<br>
                Bienvenue au club de La Bridoire.
@@ -91,7 +93,7 @@ if ($nextGame == null) {
 <?php
 require_once 'news/news_object.php';
 
-$newslist = News::GetYearNews(2018);
+$newslist = News::GetYearNews(2020);
 foreach ($newslist as $news)
 {
    echo ' <div class="container"> <div class="row"> <div class="col-xs-12 lead">';

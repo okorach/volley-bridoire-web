@@ -1,3 +1,57 @@
+@media screen and (max-width : 960px)
+{
+   .vcb-score {
+      font-size: 1rem;
+      font-weight: bold;
+      /* letter-spacing: -2px; */
+      margin-bottom: 0.2843em;
+      margin-top: 1rem; }
+    
+    .vcb-team {
+      font-size: 0.75rem;
+      font-weight: normal;
+      /* letter-spacing: -2px; */
+      margin-bottom: 0.2843em;
+      margin-top: 0.75rem; }
+    
+    .scoretable {
+       display: table;
+       border-spacing: 3px 3px;
+       margin: auto;
+    }
+    
+    .gamerow {
+       display: table-row;
+    }
+    
+    .scoretablecell {
+       display: table-cell;
+       padding: 3px 3px;
+       text-align: center;
+       /* border: 1px solid black; */
+    }
+    .gamedate {
+       font-size: 0.6rem;
+       max-width:100px;
+       margin:auto;
+    }
+    .team {
+       width:150px;
+    }
+    
+    .score {
+       /* max-width:80;
+       margin:auto; */
+       border-radius: 6px;
+       /* padding: 10px; */
+       width: 60px;
+       height: 30px;
+    }
+}
+
+@media screen and (min-width : 961px)
+{
+
 .vcb-score {
   font-size: 2rem;
   font-weight: bold;
@@ -12,41 +66,11 @@
   margin-bottom: 0.2843em;
   margin-top: 1.5rem; }
 
-/*
-.scorebox {
-   border-radius: 10px;
-   padding: 10px;
-   width: 120px;
-   height: 60px;
-}
-*/
-
-.win {
-   background: #09bc2d;
-}
-.loss {
-   background: #f72f07;
-}
-.tiebreak {
-   background: #f4ba1a;
-}
-.unknown {
-   border:3px;
-   border-style:solid;
-   border-color:#444444;
-   background: #AEAEAE;
-}
-
 .scoretable {
    display: table;
    border-spacing: 5px 5px;
    margin: auto;
 }
-/*
-.rTableHeading { display: table-header-group; }
-.rTableBody { display: table-row-group; }
-.rTableFoot { display: table-footer-group; }
-*/
 
 .gamerow {
    display: table-row;
@@ -75,3 +99,22 @@
    height: 50px;
 }
 
+
+}
+
+.unknown {
+   border:3px;
+   border-style:solid;
+   border-color:#444444;
+   background: #AEAEAE;
+}
+
+.win {
+   background: #09bc2d;
+}
+.loss {
+   background: #f72f07;
+}
+.tiebreak {
+   background: #f4ba1a;
+}

@@ -16,6 +16,8 @@ if (! file_exists($player_bio) ) {
 	$player_bio = 'bio_'.$id.".html";
 }
 
+// FIXME Kad
+
 $player_pic = "".$id.".jpg";
 if (! file_exists($player_pic) ) {
 	$player_pic = "no_photo.jpg";

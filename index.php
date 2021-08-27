@@ -9,18 +9,29 @@
 <?php
 require_once 'matchs/game_object.php';
 $nextGame = Game::GetUnplayedGames(1);
+/*
 if ($nextGame == null) {
    $messageNextGame = "Pas de prochain match pour le mmoment";
 } else {
    $messageNextGame = "Prochain match le " . $nextGame[0]->getDate('%d/%m');
    $homeTeam = $nextGame[0]->getHomeTeam();
    if ($homeTeam != 'VCB' && $homeTeam != 'La Bridoire') {
-      $messageNextGame .= " à l'extérieur à " . $homeTeam . ".";
+      $messageNextGame .= " &agrave; l'ext&eacute;rieur &agrave; " . $homeTeam . ".";
    } else {
-      $messageNextGame .= ' à domicile à 20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.';
+      $messageNextGame .= ' &agrave; domicile &agrave; '
+      $messageNextGame .= '20h30,<br>au <a href="gymnase/gymnase.php">gymnase de Rochassieux</a>.';
    }
 }
-// $messageNextGame = "Le championnat 2020/2021 devrait démarrer aux alentours de la mi-octobre.<br>En attendant entrainement tous les mardis soir à 20h30."
+*/
+
+$messageNextGame = <<<EOT
+En attendant la prochaine saison 2021/2022 qui devrait &ecirc;tre plus satisfaisante
+que la pr&eacute;c&eacute;dente (satan&eacute; COVID),
+<br>nous passerons l'&eacute;t&eacute; &agrave; faire du beach volley
+sur les diff&eacute;rentes plages du lac d'Aiguebelette.
+N'h&eacute;sitez pas &agrave; nous contacter si vous voulez &ecirc;tre au courant des rendez-vous
+(qui se d&eacute;cident g&eacute;n&eacute;ralement au dernier moment)"
+EOT;;
 ?>
 
 <!------------------------------ INTRO ---------------------------------->
@@ -35,7 +46,7 @@ if ($nextGame == null) {
 
             <p class="mbr-section-lead lead">
             <br>Bienvenue sur le site du Volley Club La Bridoire.
-            <br><b>Le <a href="matchs/matchs.php">calendrier des matchs est publié.</a><br>1er match mardi 6 oct à Pont de Beauvoisin, 20h30 au gymnase du Lycée Pravaz</b>
+            <br><strong>Reprise des entrainements début septembre, restez à l'écoute</strong>
             <br>
             <?php echo $messageNextGame ?>
             </p>
@@ -43,8 +54,10 @@ if ($nextGame == null) {
                     <p class="mbr-section-lead lead">
                Vous aimez le <strong>volleyball</strong> et vous cherchez un club dans l'avant-pays savoyard ?<br>
                Bienvenue au club de La Bridoire.
-               <br>Nous sommes un petit groupe d'une douzaine de joueurs en manque de volley dans la région et nous avons créé ce club il y a 10 ans maintenant.
-               <br>Nous sommes engagés dans un championnat (FSGT Savoie) pour un peu de compétition, mais l'important reste la bonne humeur et le plaisir du jeu.<br></p>
+               <br>Nous sommes un petit groupe d'une douzaine de joueurs en manque de volley
+               dans la r&eacute;gion et nous avons cr&eacute;&eacute; ce club il y a 10 ans maintenant.
+               <br>Nous sommes engag&eacute;s dans un championnat (FSGT Savoie) pour
+               un peu de comp&eacute;tition, mais l'important reste la bonne humeur et le plaisir du jeu.<br></p>
 <!--
                     <div class="mbr-section-btn">
                <a class="btn btn-lg btn-primary" href="/contacts/contacts.php">Contacts</a>

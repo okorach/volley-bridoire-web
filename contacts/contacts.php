@@ -18,7 +18,7 @@
                     <h1 class="mbr-section-title display-1">Nous contacter</h1>
                     <p class="mbr-section-lead lead">
 Vous pouvez nous contacter:<br>
-Par email: <strong>volley.bridoire@free.fr</strong><br>
+Par email: <strong>olivier.korach@gmail.com</strong><br>
 Par t&eacute;l&eacute;phone: <strong>06 89 55 50 81</strong><br>
 <br><br>
 Nous rencontrer: Quand nous n'avons de match &agrave; l'ext&eacute;rieur nous nous entra&icirc;nons le
